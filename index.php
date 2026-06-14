@@ -40,7 +40,7 @@ $bankAccount = '9973972951';
 $bankName = 'Vietcombank';
 $accountHolder = 'Ngoc Tan';
 $qrUrl = 'https://img.vietqr.io/image/VCB-9973972951-qr_only.png?addInfo=Chuc%20hai%20ban%20hanh%20phuc';
-$countdownEnd = '1736006400000';
+$countdownEnd = '1783071000000';
 $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_4316','NLV_4350','NLV_6174','NLV_6108'];
 ?>
 <!DOCTYPE html>
@@ -96,13 +96,13 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
         <p class="ladi-el invite-text" data-aos="fade-up">Trân trọng kính mời</p>
 
         <div class="ladi-el date-box" data-aos="fade-up">
-            <span class="weekday">Thứ 7</span>
+            <span class="weekday">Thứ 6</span>
             <span class="line"></span>
-            <span class="day">4</span>
+            <span class="day">3</span>
             <span class="line"></span>
-            <span class="month">Tháng 1</span>
+            <span class="month">Tháng 7</span>
         </div>
-        <p class="ladi-el year" data-aos="fade-up">2025</p>
+        <p class="ladi-el year" data-aos="fade-up">2026</p>
         <p class="ladi-el reception" data-aos="fade-up">Reception to Follow</p>
 
         <div class="ladi-el deco-bottom ladi-bg"></div>
@@ -147,9 +147,9 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
 
         <h2 class="ladi-el title" data-aos="fade-up">Kính mời!</h2>
         <div class="ladi-el month-year" data-aos="fade-up">
-            <span class="month">THÁNG 1</span>
+            <span class="month">THÁNG 7</span>
             <span class="dash">-</span>
-            <span class="year">2025</span>
+            <span class="year">2026</span>
         </div>
 
         <div class="ladi-el calendar" data-aos="fade-up">
@@ -157,7 +157,7 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
                 <span>mon</span><span>tue</span><span>wed</span><span>thur</span><span>fri</span><span>sat</span><span>sun</span>
             </div>
             <div class="calendar-row nums">
-                <span>29</span><span>30</span><span>1</span><span>2</span><span>3</span><span class="highlight">4</span><span>5</span>
+                <span>29</span><span>30</span><span>1</span><span>2</span><span class="highlight">3</span><span>4</span><span>5</span>
             </div>
             <div class="calendar-row nums">
                 <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
@@ -169,7 +169,7 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
                 <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
             </div>
             <div class="calendar-row nums">
-                <span>27</span><span>28</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+                <span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span>&nbsp;</span><span>&nbsp;</span>
             </div>
         </div>
 
@@ -242,7 +242,7 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
         <div class="ladi-el script-date">Date</div>
         <div class="ladi-el deco-leaf ladi-bg"></div>
 
-        <p class="ladi-el gallery-label">04.01.2025</p>
+        <p class="ladi-el gallery-label">03.07.2026</p>
 
         <div class="ladi-el gallery">
             <div class="photo tall" style="background-image:url('/assets/image/NLV_3594.png');"></div>
@@ -287,7 +287,7 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
         <div class="ladi-el deco-divider ladi-bg"></div>
 
         <h3 class="ladi-el countdown-title" data-aos="fade-up">Đếm ngược thời gian</h3>
-        <div class="ladi-el countdown" id="countdown" data-endtime="1736006400000">
+        <div class="ladi-el countdown" id="countdown" data-endtime="1783071000000">
             <div class="box"><b id="cd-day">00</b><span>Ngày</span></div>
             <div class="box"><b id="cd-hour">00</b><span>Giờ</span></div>
             <div class="box"><b id="cd-minute">00</b><span>Phút</span></div>
@@ -331,13 +331,13 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
                 <div class="d-divider" data-aos="fade-up"><span>Save the Date</span></div>
 
                 <div class="d-hero-date" data-aos="fade-up">
-                    <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val">7</span></div>
+                    <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val">6</span></div>
                     <div class="d-date-sep"></div>
-                    <div class="d-date-cell big"><span class="lbl">Ngày</span><span class="val">4</span></div>
+                    <div class="d-date-cell big"><span class="lbl">Ngày</span><span class="val">3</span></div>
                     <div class="d-date-sep"></div>
-                    <div class="d-date-cell"><span class="lbl">Tháng</span><span class="val">01</span></div>
+                    <div class="d-date-cell"><span class="lbl">Tháng</span><span class="val">07</span></div>
                     <div class="d-date-sep"></div>
-                    <div class="d-date-cell"><span class="lbl">Năm</span><span class="val">2025</span></div>
+                    <div class="d-date-cell"><span class="lbl">Năm</span><span class="val">2026</span></div>
                 </div>
 
                 <p class="d-hero-invite" data-aos="fade-up">Trân trọng kính mời</p>
@@ -372,14 +372,14 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
         <h2 class="d-section-title" data-aos="fade-up">Kính mời!</h2>
         <div class="d-event-grid">
             <div class="d-calendar-card" data-aos="fade-right">
-                <p class="d-cal-monthyear">THÁNG 1 · 2025</p>
+                <p class="d-cal-monthyear">THÁNG 7 · 2026</p>
                 <div class="d-cal">
                     <div class="d-cal-row d-cal-days"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span></div>
-                    <div class="d-cal-row"><span class="muted">29</span><span class="muted">30</span><span>1</span><span>2</span><span>3</span><span class="hl">4</span><span>5</span></div>
+                    <div class="d-cal-row"><span class="muted">29</span><span class="muted">30</span><span>1</span><span>2</span><span class="hl">3</span><span>4</span><span>5</span></div>
                     <div class="d-cal-row"><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div>
                     <div class="d-cal-row"><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span></div>
                     <div class="d-cal-row"><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span></div>
-                    <div class="d-cal-row"><span>27</span><span>28</span></div>
+                    <div class="d-cal-row"><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div>
                 </div>
             </div>
             <div class="d-venue-card" data-aos="fade-left">
