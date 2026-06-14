@@ -2,11 +2,24 @@ document.addEventListener('DOMContentLoaded', function () {
     // Enable animation styles only when JS is running (progressive enhancement)
     document.documentElement.classList.add('aos-loading');
 
+    // Layout mode detection: mobile (scale) vs desktop (full layout)
+    function isDesktop() {
+        return window.matchMedia('(min-width: 768px)').matches;
+    }
+
     // Responsive scale: keep the 420px pixel-perfect layout, but shrink it to fit narrower screens
     function applyResponsiveScale() {
         const wrap = document.querySelector('.wedding-wrap');
         const scaleWrap = document.querySelector('.responsive-scale');
         if (!wrap || !scaleWrap) return;
+
+        // On desktop, clear any mobile scaling
+        if (isDesktop()) {
+            wrap.style.transform = 'none';
+            scaleWrap.style.height = 'auto';
+            scaleWrap.style.overflow = 'visible';
+            return;
+        }
 
         const viewportWidth = window.innerWidth;
         const designWidth = 420;
@@ -29,10 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const gateRight = document.querySelector('.gate-right');
     const openGateBtn = document.getElementById('openGateBtn');
     const main = document.getElementById('main');
+    const desktopMain = document.getElementById('desktop-main');
     const audio = document.getElementById('audio');
     const musicToggle = document.getElementById('musicToggle');
 
-    if (openGateBtn && gate && main) {
+    if (openGateBtn && gate) {
         openGateBtn.addEventListener('click', function () {
             if (audio) {
                 audio.play().catch(() => {});
@@ -42,7 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 gateRight.style.transition = 'opacity 2s ease';
                 gateRight.style.opacity = '0';
             }
-            main.style.display = 'block';
+            // Reveal the appropriate layout (mobile shows via inline display, desktop via class)
+            if (main) main.style.display = 'block';
+            if (desktopMain) desktopMain.classList.add('gate-shown');
 
             // Re-apply responsive scale now that content is visible
             applyResponsiveScale();
@@ -102,41 +118,63 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, 4000);
 
-    // Countdown
-    const countdownEl = document.getElementById('countdown');
-    if (countdownEl) {
-        const endTime = new Date(parseInt(countdownEl.dataset.endtime, 10)).getTime();
-        const dayEl = document.getElementById('cd-day');
-        const hourEl = document.getElementById('cd-hour');
-        const minuteEl = document.getElementById('cd-minute');
-        const secondEl = document.getElementById('cd-second');
+    // Countdown — works for both mobile (#countdown with #cd-*) and desktop (.cd-desktop with .cd-*)
+    function setupCountdown(rootSel, itemSel) {
+        const roots = document.querySelectorAll(rootSel);
+        if (!roots.length) return null;
+        const endTime = new Date(parseInt(roots[0].dataset.endtime, 10)).getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
             const diff = endTime - now;
 
+            let d, h, m, s;
             if (diff <= 0) {
-                if (dayEl) dayEl.textContent = '00';
-                if (hourEl) hourEl.textContent = '00';
-                if (minuteEl) minuteEl.textContent = '00';
-                if (secondEl) secondEl.textContent = '00';
-                return;
+                d = h = m = s = '00';
+            } else {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                d = String(days).padStart(2, '0');
+                h = String(hours).padStart(2, '0');
+                m = String(minutes).padStart(2, '0');
+                s = String(seconds).padStart(2, '0');
             }
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            if (dayEl) dayEl.textContent = String(days).padStart(2, '0');
-            if (hourEl) hourEl.textContent = String(hours).padStart(2, '0');
-            if (minuteEl) minuteEl.textContent = String(minutes).padStart(2, '0');
-            if (secondEl) secondEl.textContent = String(seconds).padStart(2, '0');
+            roots.forEach(root => {
+                const dayEls = root.querySelectorAll(itemSel + '-day');
+                const hourEls = root.querySelectorAll(itemSel + '-hour');
+                const minEls = root.querySelectorAll(itemSel + '-minute');
+                const secEls = root.querySelectorAll(itemSel + '-second');
+                dayEls.forEach(el => el.textContent = d);
+                hourEls.forEach(el => el.textContent = h);
+                minEls.forEach(el => el.textContent = m);
+                secEls.forEach(el => el.textContent = s);
+            });
         }
 
         updateCountdown();
-        setInterval(updateCountdown, 1000);
+        return updateCountdown;
     }
+
+    const mobileCD = setupCountdown('#countdown', '#cd');
+    const desktopCD = setupCountdown('.cd-desktop', '.cd');
+    setInterval(() => { if (mobileCD) mobileCD(); if (desktopCD) desktopCD(); }, 1000);
+
+    // Copy bank account button (desktop)
+    document.querySelectorAll('.d-copy-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const text = this.dataset.copy;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text).then(() => {
+                    const orig = this.textContent;
+                    this.textContent = '✓ Đã chép';
+                    setTimeout(() => { this.textContent = orig; }, 2000);
+                });
+            }
+        });
+    });
 
     // Modals
     document.querySelectorAll('[data-modal-target]').forEach(trigger => {

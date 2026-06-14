@@ -28,6 +28,20 @@ $wishes = [];
 if (file_exists(__DIR__ . '/wishes.json')) {
     $wishes = array_reverse(json_decode(file_get_contents(__DIR__ . '/wishes.json'), true) ?: []);
 }
+
+// Shared content (used by both mobile and desktop layouts)
+$brideName = 'Thu Trang';
+$groomName = 'Ngọc Tân';
+$brideQuote = '"Em đã pha trà,<br>Cũng đã cắm hoa<br>Chỉ chờ anh qua<br>Là tròn chữ <span style="color:#446084;font-weight:700;">Nhà</span>"';
+$groomQuote = '"Anh yêu em như anh yêu đất nước<br>Vất vả đau thương tươi thắm vô ngần<br>Anh nhớ em mỗi bước đường anh bước<br>Mỗi tối anh nằm mỗi miếng anh ăn"';
+$venueAddress = 'Khu Đô Thị Mới Trạm Bóng - Thôn Minh Tân<br>Quang Minh - Gia Lộc - Hải Dương';
+$mapUrl = 'https://maps.app.goo.gl/UNtAc16hVrn59km3A';
+$bankAccount = '9973972951';
+$bankName = 'Vietcombank';
+$accountHolder = 'Ngoc Tan';
+$qrUrl = 'https://img.vietqr.io/image/VCB-9973972951-qr_only.png?addInfo=Chuc%20hai%20ban%20hanh%20phuc';
+$countdownEnd = '1736006400000';
+$galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_4316','NLV_4350','NLV_6174','NLV_6108'];
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -47,7 +61,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css?v=6">
+    <link rel="stylesheet" href="/assets/css/style.css?v=7">
 </head>
 <body>
 
@@ -65,7 +79,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
 <div class="responsive-scale"><div class="wedding-wrap" id="main" style="display:none">
 
     <!-- ===== SECTION 1: HERO ===== -->
-    <section class="section" id="SECTION1">
+    <section class="section mobile-only" id="SECTION1">
         <div class="ladi-el bg1 ladi-bg"></div>
         <div class="ladi-el overlay1"></div>
         <div class="ladi-el floral-body ladi-bg"></div>
@@ -95,7 +109,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     </section>
 
     <!-- ===== SECTION 2: COUPLE ===== -->
-    <section class="section" id="SECTION2">
+    <section class="section mobile-only" id="SECTION2">
         <div class="ladi-el floral-top ladi-bg"></div>
         <div class="ladi-el floral-bottom ladi-bg"></div>
 
@@ -125,7 +139,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     </section>
 
     <!-- ===== SECTION 3: CALENDAR + VENUE ===== -->
-    <section class="section" id="SECTION3">
+    <section class="section mobile-only" id="SECTION3">
         <div class="ladi-el floral-bg ladi-bg"></div>
         <div class="ladi-el deco-top ladi-bg"></div>
         <div class="ladi-el deco-bottom ladi-bg"></div>
@@ -169,7 +183,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     </section>
 
     <!-- ===== SECTION 4: TIMELINE ===== -->
-    <section class="section" id="SECTION4">
+    <section class="section mobile-only" id="SECTION4">
         <div class="ladi-el floral-bg ladi-bg"></div>
         <div class="ladi-el banner ladi-bg"></div>
         <div class="ladi-el banner-gradient"></div>
@@ -205,7 +219,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     </section>
 
     <!-- ===== SECTION 5: GALLERY ===== -->
-    <section class="section" id="SECTION5">
+    <section class="section mobile-only" id="SECTION5">
         <div class="ladi-el floral-mid ladi-bg"></div>
         <div class="ladi-el floral-bottom ladi-bg"></div>
 
@@ -244,7 +258,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     </section>
 
     <!-- ===== SECTION 6: MỪNG CƯỚI + COUNTDOWN ===== -->
-    <section class="section" id="SECTION6">
+    <section class="section mobile-only" id="SECTION6">
         <div class="ladi-el floral-top ladi-bg"></div>
         <div class="ladi-el floral-bottom ladi-bg"></div>
         <div class="ladi-el deco-header ladi-bg"></div>
@@ -282,7 +296,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     </section>
 
     <!-- ===== SECTION 7: THANK YOU ===== -->
-    <section class="section" id="SECTION7">
+    <section class="section mobile-only" id="SECTION7">
         <div class="ladi-el closing-photo ladi-bg"></div>
         <div class="ladi-el overlay-frame ladi-bg"></div>
 
@@ -293,6 +307,154 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     </section>
 
 </div></div>
+
+<!-- ============ DESKTOP LAYOUT (≥768px) ============ -->
+<div class="desktop-wrap desktop-only gate-hidden" id="desktop-main">
+
+    <!-- HERO (split screen) -->
+    <section class="d-hero">
+        <div class="d-hero-photo" style="background-image:url('/assets/image/NLV_3721.png');"></div>
+        <div class="d-hero-card">
+            <p class="d-kicker" data-aos="fade-up">Wedding Invitation</p>
+            <h1 class="d-hero-names" data-aos="fade-up">Ngọc Tân <span>&amp;</span> Thu Trang</h1>
+            <div class="d-hero-date" data-aos="fade-up">
+                <span>Thứ 7</span><span class="sep">·</span><span class="big">4</span><span class="sep">·</span><span>Tháng 1, 2025</span>
+            </div>
+            <p class="d-hero-invite" data-aos="fade-up">Trân trọng kính mời<br>16 giờ 30 phút</p>
+            <p class="d-hero-reception" data-aos="fade-up">Reception to Follow</p>
+        </div>
+    </section>
+
+    <!-- COUPLE (2 columns) -->
+    <section class="d-couple">
+        <h2 class="d-section-title" data-aos="fade-up">Cô Dâu &amp; Chú Rể</h2>
+        <div class="d-couple-grid">
+            <div class="d-person" data-aos="fade-right">
+                <div class="d-person-photo" style="background-image:url('/assets/image/codau.jpg');"></div>
+                <p class="d-person-label">CÔ DÂU</p>
+                <h3 class="d-person-name"><?= htmlspecialchars($brideName) ?></h3>
+                <p class="d-person-quote"><?= $brideQuote ?></p>
+            </div>
+            <div class="d-heart">&amp;</div>
+            <div class="d-person" data-aos="fade-left">
+                <div class="d-person-photo" style="background-image:url('/assets/image/NLV_4141.png');"></div>
+                <p class="d-person-label">CHÚ RỂ</p>
+                <h3 class="d-person-name"><?= htmlspecialchars($groomName) ?></h3>
+                <p class="d-person-quote"><?= $groomQuote ?></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALENDAR + VENUE -->
+    <section class="d-event">
+        <h2 class="d-section-title" data-aos="fade-up">Kính mời!</h2>
+        <div class="d-event-grid">
+            <div class="d-calendar-card" data-aos="fade-right">
+                <p class="d-cal-monthyear">THÁNG 1 · 2025</p>
+                <div class="d-cal">
+                    <div class="d-cal-row d-cal-days"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span></div>
+                    <div class="d-cal-row"><span class="muted">29</span><span class="muted">30</span><span>1</span><span>2</span><span>3</span><span class="hl">4</span><span>5</span></div>
+                    <div class="d-cal-row"><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div>
+                    <div class="d-cal-row"><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span></div>
+                    <div class="d-cal-row"><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span></div>
+                    <div class="d-cal-row"><span>27</span><span>28</span></div>
+                </div>
+            </div>
+            <div class="d-venue-card" data-aos="fade-left">
+                <p class="d-venue-kicker">TIỆC NHÀ TRAI ĐƯỢC TỔ CHỨC</p>
+                <h3 class="d-venue-title">TƯ GIA NHÀ TRAI</h3>
+                <p class="d-venue-address"><?= $venueAddress ?></p>
+                <a class="d-map-btn" href="<?= $mapUrl ?>" target="_blank" rel="noopener">📍 XEM ĐỊA CHỈ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="d-timeline">
+        <h2 class="d-section-title" data-aos="fade-up">Sự kiện quan trọng</h2>
+        <div class="d-timeline-grid">
+            <div class="d-tl-card" data-aos="fade-up">
+                <div class="d-tl-time">16:30</div>
+                <p class="d-tl-desc">Đón tiếp khách mời</p>
+            </div>
+            <div class="d-tl-card" data-aos="fade-up">
+                <div class="d-tl-time">17:00</div>
+                <p class="d-tl-desc">Tiệc mừng cưới</p>
+            </div>
+            <div class="d-tl-card" data-aos="fade-up">
+                <div class="d-tl-time">19:00</div>
+                <p class="d-tl-desc">Chương trình văn nghệ mừng hạnh phúc</p>
+            </div>
+        </div>
+        <p class="d-timeline-note" data-aos="fade-up">Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng mình!</p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="d-gallery">
+        <h2 class="d-section-title" data-aos="fade-up">Khoảnh khắc</h2>
+        <div class="d-gallery-grid">
+            <?php foreach ($galleryImages as $img): ?>
+            <div class="d-gallery-photo" style="background-image:url('/assets/image/<?= $img ?>.png');" data-aos="fade-up"></div>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
+    <!-- GIFT + RSVP -->
+    <section class="d-gift">
+        <h2 class="d-section-title" data-aos="fade-up">Mừng Cưới</h2>
+        <div class="d-gift-grid">
+            <div class="d-rsvp-col" data-aos="fade-right">
+                <h3>Gửi lời chúc</h3>
+                <form method="POST" action="">
+                    <input type="text" name="wish_name" placeholder="Tên của bạn" required maxlength="100">
+                    <textarea name="wish_message" placeholder="Lời chúc của bạn..." required maxlength="500" rows="4"></textarea>
+                    <button type="submit">GỬI LỜI CHÚC</button>
+                </form>
+                <?php if ($wishSaved): ?>
+                <p class="d-saved">✓ Cảm ơn bạn đã gửi lời chúc!</p>
+                <?php endif; ?>
+                <?php if (!empty($wishes)): ?>
+                <div class="d-wishes-list">
+                    <?php foreach (array_slice($wishes, 0, 5) as $w): ?>
+                    <div class="d-wish"><strong><?= $w['name'] ?></strong>: <?= $w['message'] ?></div>
+                    <?php endforeach; ?>
+                </div>
+                <?php endif; ?>
+            </div>
+            <div class="d-bank-col" data-aos="fade-left">
+                <div class="d-qr">
+                    <img src="<?= $qrUrl ?>" alt="QR chuyển khoản">
+                </div>
+                <div class="d-bank-info">
+                    <p class="d-bank-role">CHÚ RỂ</p>
+                    <p class="d-bank-holder"><?= htmlspecialchars($accountHolder) ?></p>
+                    <p class="d-bank-name"><?= htmlspecialchars($bankName) ?></p>
+                    <p class="d-bank-num"><?= htmlspecialchars($bankAccount) ?></p>
+                    <button class="d-copy-btn" data-copy="<?= htmlspecialchars($bankAccount) ?>">📋 Sao chép STK</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-countdown" data-aos="fade-up">
+            <h3>Đếm ngược thời gian</h3>
+            <div class="cd-desktop" data-endtime="<?= $countdownEnd ?>">
+                <div class="box"><b class="cd-day">00</b><span>Ngày</span></div>
+                <div class="box"><b class="cd-hour">00</b><span>Giờ</span></div>
+                <div class="box"><b class="cd-minute">00</b><span>Phút</span></div>
+                <div class="box"><b class="cd-second">00</b><span>Giây</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="d-closing">
+        <div class="d-closing-bg" style="background-image:url('/assets/image/NLV_3430.png');"></div>
+        <div class="d-closing-overlay">
+            <p class="d-closing-quote">"Yêu là cùng nhau vượt qua nỗi đau, là khi anh chọn ở lại thay vì bỏ chạy."</p>
+            <h2 class="d-thank-you">Thank you!</h2>
+        </div>
+    </section>
+
+</div>
 
 <!-- Wishes modal -->
 <div id="wishes-modal" class="modal-backdrop">
@@ -315,6 +477,6 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     </div>
 </div>
 
-<script src="/assets/js/app.js?v=6"></script>
+<script src="/assets/js/app.js?v=7"></script>
 </body>
 </html>
