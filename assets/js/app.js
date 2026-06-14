@@ -2,6 +2,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // Enable animation styles only when JS is running (progressive enhancement)
     document.documentElement.classList.add('aos-loading');
 
+    // Responsive scale: keep the 420px pixel-perfect layout, but shrink it to fit narrower screens
+    function applyResponsiveScale() {
+        const wrap = document.querySelector('.wedding-wrap');
+        const scaleWrap = document.querySelector('.responsive-scale');
+        if (!wrap || !scaleWrap) return;
+
+        const viewportWidth = window.innerWidth;
+        const designWidth = 420;
+        const scale = Math.min(1, viewportWidth / designWidth);
+
+        wrap.style.transform = 'scale(' + scale + ')';
+        wrap.style.transformOrigin = 'top center';
+
+        // Adjust the outer wrapper height so the scaled content doesn't leave a gap
+        const totalHeight = wrap.scrollHeight;
+        scaleWrap.style.height = (totalHeight * scale) + 'px';
+        scaleWrap.style.overflow = 'hidden';
+    }
+
+    applyResponsiveScale();
+    window.addEventListener('resize', applyResponsiveScale);
+
     // Gate overlay logic
     const gate = document.getElementById('gate');
     const gateRight = document.querySelector('.gate-right');
@@ -21,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 gateRight.style.opacity = '0';
             }
             main.style.display = 'block';
+
+            // Re-apply responsive scale now that content is visible
+            applyResponsiveScale();
 
             setTimeout(() => {
                 gate.remove();

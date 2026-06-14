@@ -37,8 +37,8 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Trang web chính thức của Vũ Tùng & Phương Anh, nơi chia sẻ những khoảnh khắc đẹp và câu chuyện tình yêu.">
-    <meta property="og:title" content="Vũ Tùng & Phương Anh - Hành trình hạnh phúc">
+    <meta name="description" content="Trang web chính thức của Vũ Tùng &amp; Phương Anh, nơi chia sẻ những khoảnh khắc đẹp và câu chuyện tình yêu.">
+    <meta property="og:title" content="Vũ Tùng &amp; Phương Anh - Hành trình hạnh phúc">
     <meta property="og:type" content="website">
     <meta property="og:image" content="/assets/image/NLV_4876.png">
     <meta property="og:url" content="https://damcuoitungphanh.com">
@@ -47,7 +47,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css?v=4">
+    <link rel="stylesheet" href="/assets/css/style.css?v=6">
 </head>
 <body>
 
@@ -62,7 +62,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
 <!-- Music toggle -->
 <button id="musicToggle" class="music-toggle" style="background-image: url('https://w.ladicdn.com/s350x350/6322a62f2dad980013bb5005/play_pause_fast_forward_stop_in_circles-20241022100240-rn2mm.png');" aria-label="Bật/tắt nhạc"></button>
 
-<div class="wedding-wrap" id="main" style="display:none">
+<div class="responsive-scale"><div class="wedding-wrap" id="main" style="display:none">
 
     <!-- ===== SECTION 1: HERO ===== -->
     <section class="section" id="SECTION1">
@@ -73,7 +73,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
         <div class="ladi-el deco-left ladi-bg"></div>
         <div class="ladi-el deco-square ladi-bg"></div>
 
-        <h1 class="ladi-el title" data-aos="fade-up">VŨ TÙNG &amp; PHƯƠNG ANH</h1>
+            <h1 class="ladi-el title" data-aos="fade-up">VŨ TÙNG &amp; PHƯƠNG ANH</h1>
         <p class="ladi-el subtitle" data-aos="fade-up">Wedding</p>
         <div class="ladi-el save-date" data-aos="fade-up">Save<br>the<br>date</div>
         <div class="ladi-el names" data-aos="fade-up">
@@ -292,7 +292,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
         <h2 class="ladi-el thank-you" data-aos="fade-up">Thank you!</h2>
     </section>
 
-</div>
+</div></div>
 
 <!-- Wishes modal -->
 <div id="wishes-modal" class="modal-backdrop">
@@ -315,6 +315,6 @@ if (file_exists(__DIR__ . '/wishes.json')) {
     </div>
 </div>
 
-<script src="/assets/js/app.js?v=4"></script>
+<script src="/assets/js/app.js?v=6"></script>
 </body>
 </html>

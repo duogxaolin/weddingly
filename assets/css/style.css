@@ -21,10 +21,15 @@ body {
     font-family: 'Cormorant Garamond', 'Open Sans', serif;
     background: #fff;
     color: #1a1a1a;
+    overflow-x: hidden;
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
     text-size-adjust: none;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 a {
@@ -37,14 +42,20 @@ img {
     display: block;
 }
 
-/* Container */
+/* Container — fixed 420px design canvas, scaled to fit narrower screens */
+.responsive-scale {
+    width: 420px;
+    max-width: 420px;
+    margin: 0 auto;
+    position: relative;
+}
+
 .wedding-wrap {
     width: 420px;
-    max-width: 100%;
-    margin: 0 auto;
     position: relative;
     background: #fff;
     overflow: hidden;
+    transform-origin: top center;
 }
 
 /* Generic element */
