@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#auth
+ErrorDocument 404                                    /404.php
+#auth
+RewriteRule ^chure/ngay4$                         index.php [L]

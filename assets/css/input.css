@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base body - cream/beige floral wedding background */
+body {
+    font-family: 'Cormorant Garamond', 'Open Sans', serif;
+    background-color: #faf6ee;
+    background-image: url('https://w.ladicdn.com/s1000x900/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-1-20240504032344-70gpy.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    color: #1a1a1a;
+}
+
+/* Custom utility: thin gold divider */
+@layer components {
+    .divider-gold {
+        @apply flex items-center justify-center my-3;
+    }
+    .divider-gold::before,
+    .divider-gold::after {
+        content: '';
+        @apply h-px w-12 bg-wedding-bronze/40;
+    }
+    .divider-gold span {
+        @apply mx-3 text-wedding-bronze text-xs;
+    }
+}

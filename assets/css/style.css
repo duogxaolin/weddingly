@@ -1,0 +1,1263 @@
+/**
+ * Wedding invitation: Vũ Tùng & Phương Anh
+ * Pixel-perfect reconstruction from LadiPage
+ * Layout width: 420px mobile-first
+ */
+
+/* Reset & base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: 'Cormorant Garamond', 'Open Sans', serif;
+    background: #fff;
+    color: #1a1a1a;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Container */
+.wedding-wrap {
+    width: 420px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Generic element */
+.ladi-el {
+    position: absolute;
+}
+
+.ladi-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Gate overlay */
+.gate-container {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gate-right {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.open-gate-btn {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Music toggle */
+.music-toggle {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 90000050;
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Sections */
+.section {
+    position: relative;
+    margin: 0 auto;
+    width: 420px;
+}
+
+/* Section 1 */
+#SECTION1 {
+    height: 950.801px;
+}
+
+#SECTION1 .bg1 {
+    width: 420px;
+    height: 356px;
+    top: 0;
+    left: 0;
+    background-image: url('/assets/image/NLV_3721.png');
+    background-size: cover;
+    background-position: 50% 0%;
+}
+
+#SECTION1 .overlay1 {
+    width: 419px;
+    height: 210.207px;
+    top: 148px;
+    left: 1px;
+    background: linear-gradient(rgba(253,251,251,0), rgba(2,2,2,0.2));
+}
+
+#SECTION1 .floral-body {
+    width: 420px;
+    height: 588.001px;
+    top: 362.8px;
+    left: 0;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    filter: brightness(103%);
+}
+
+#SECTION1 .deco-top {
+    width: 449.8px;
+    height: 377.349px;
+    top: 219.207px;
+    left: -20.8px;
+    background-image: url('https://w.ladicdn.com/s750x700/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-1-20240504031846-kargo.png');
+    background-size: cover;
+    transform: perspective(1000px) rotate(3deg) rotateX(180deg);
+    opacity: 0.9;
+}
+
+#SECTION1 .deco-left {
+    width: 688.72px;
+    height: 577.785px;
+    top: 291.107px;
+    left: -140px;
+    background-image: url('https://w.ladicdn.com/s1000x900/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-1-20240504032344-70gpy.png');
+    background-size: cover;
+}
+
+#SECTION1 .deco-square {
+    width: 439px;
+    height: 439px;
+    top: 389.556px;
+    left: -12px;
+    background-image: url('https://w.ladicdn.com/s750x750/6322a62f2dad980013bb5005/2-20240504032853-clj0b.png');
+    background-size: cover;
+}
+
+#SECTION1 .title {
+    top: 235.207px;
+    left: 20%;
+    width: 60%;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 19px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+#SECTION1 .subtitle {
+    top: 254.207px;
+    left: 92.5px;
+    width: 255px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 26px;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+#SECTION1 .save-date {
+    top: 405.556px;
+    left: 42.5px;
+    width: 330px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 29.7px;
+    color: #000;
+    line-height: 1.1;
+}
+
+#SECTION1 .names {
+    top: 539.556px;
+    left: 118.256px;
+    width: 185px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+#SECTION1 .invite-text {
+    top: 609.556px;
+    left: 114.5px;
+    width: 191px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 18px;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+#SECTION1 .date-box {
+    top: 641.5px;
+    left: 108px;
+    width: 201.512px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #000;
+}
+
+#SECTION1 .date-box .weekday,
+#SECTION1 .date-box .month {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+#SECTION1 .date-box .day {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+}
+
+#SECTION1 .date-box .line {
+    width: 1px;
+    height: 30px;
+    background: #1a1a1a;
+}
+
+#SECTION1 .year {
+    top: 693px;
+    left: 173px;
+    width: 76px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 19.52px;
+    color: #000;
+}
+
+#SECTION1 .reception {
+    top: 743.556px;
+    left: 112px;
+    width: 191px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 17px;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+#SECTION1 .deco-bottom {
+    width: 115.368px;
+    height: 96.785px;
+    top: 850.892px;
+    left: 146.676px;
+    background-image: url('https://w.ladicdn.com/s450x400/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-2-20240504082626-p3p_x.png');
+    background-size: cover;
+}
+
+/* Section 2 */
+#SECTION2 {
+    height: 957.2px;
+}
+
+#SECTION2 .floral-top {
+    width: 420px;
+    height: 588.001px;
+    top: 0;
+    left: 1px;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    transform: perspective(1000px) rotateX(180deg);
+    filter: brightness(103%);
+}
+
+#SECTION2 .floral-bottom {
+    width: 420px;
+    height: 588.001px;
+    top: 369.199px;
+    left: 1px;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    transform: perspective(1000px) rotateX(180deg);
+    filter: brightness(103%);
+}
+
+#SECTION2 .bride-photo {
+    width: 200px;
+    height: 270px;
+    top: 0;
+    left: 0;
+    background-image: url('/assets/image/codau.jpg');
+    background-size: cover;
+    border-radius: 0 90px 0 0;
+}
+
+#SECTION2 .bride-portrait-1 {
+    width: 77.0351px;
+    height: 110.885px;
+    top: 120.574px;
+    left: 160.597px;
+    background-image: url('/assets/image/NLV_3430.png');
+    background-size: cover;
+    border: 1px solid #fff;
+}
+
+#SECTION2 .bride-portrait-2 {
+    width: 77.0351px;
+    height: 110.885px;
+    top: 120.574px;
+    left: 240.574px;
+    background-image: url('/assets/image/NLV_3359.png');
+    background-size: cover;
+    border: 1px solid #fff;
+}
+
+#SECTION2 .bride-label {
+    top: 57.755px;
+    left: 209px;
+    width: 84px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 19px;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+#SECTION2 .bride-name {
+    top: 84.755px;
+    left: 142.597px;
+    width: 302px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 30px;
+    color: #1f1f1f;
+    letter-spacing: 2px;
+}
+
+#SECTION2 .bride-quote {
+    top: 287.699px;
+    left: 17px;
+    width: 388px;
+    text-align: justify;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: #000;
+    line-height: 1.8;
+}
+
+#SECTION2 .groom-photo {
+    width: 200px;
+    height: 271px;
+    top: 456px;
+    left: 220px;
+    background-image: url('/assets/image/NLV_4141.png');
+    background-size: cover;
+    border-radius: 90px 0 0 0;
+}
+
+#SECTION2 .groom-portrait-1 {
+    width: 77.0351px;
+    height: 110.885px;
+    top: 578.001px;
+    left: 101.597px;
+    background-image: url('/assets/image/NLV_1576.png');
+    background-size: cover;
+    border: 1px solid #fff;
+}
+
+#SECTION2 .groom-portrait-2 {
+    width: 77.0351px;
+    height: 110.885px;
+    top: 578.001px;
+    left: 181.574px;
+    background-image: url('/assets/image/NLV_3991.png');
+    background-size: cover;
+    border: 1px solid #fff;
+}
+
+#SECTION2 .groom-label {
+    top: 515.001px;
+    left: 129px;
+    width: 84px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 19px;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+#SECTION2 .groom-name {
+    top: 542.001px;
+    left: -35.488px;
+    width: 302px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 30px;
+    color: #1f1f1f;
+    letter-spacing: 2px;
+}
+
+#SECTION2 .groom-quote {
+    top: 745.886px;
+    left: 16px;
+    width: 388px;
+    text-align: justify;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: #000;
+    line-height: 1.8;
+}
+
+/* Section 3 */
+#SECTION3 {
+    height: 619.001px;
+}
+
+#SECTION3 .floral-bg {
+    width: 442.857px;
+    height: 620.001px;
+    top: 0;
+    left: 0;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    transform: rotateX(180deg);
+}
+
+#SECTION3 .deco-top {
+    width: 356.152px;
+    height: 298.785px;
+    top: 0;
+    left: 63.848px;
+    background-image: url('https://w.ladicdn.com/s700x600/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-3-20240504041625-z78i8.png');
+    background-size: cover;
+}
+
+#SECTION3 .deco-bottom {
+    width: 356.152px;
+    height: 298.785px;
+    top: 319.149px;
+    left: 1.5px;
+    background-image: url('https://w.ladicdn.com/s700x600/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-3-20240504041625-z78i8.png');
+    background-size: cover;
+    transform: perspective(1000px) rotateX(180deg) rotateY(180deg);
+}
+
+#SECTION3 .title {
+    top: 23.8px;
+    left: 1.5px;
+    width: 419px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 38px;
+    color: #1f1f1f;
+    letter-spacing: 2px;
+}
+
+#SECTION3 .month-year {
+    top: 83.8px;
+    left: 127px;
+    width: 164px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #1a1a1a;
+}
+
+#SECTION3 .month-year .month {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+#SECTION3 .month-year .dash {
+    font-size: 21.1px;
+    color: #000;
+}
+
+#SECTION3 .month-year .year {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#SECTION3 .calendar {
+    top: 141.649px;
+    left: 25.5px;
+    width: 366px;
+}
+
+#SECTION3 .calendar-row {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+#SECTION3 .calendar-row.days {
+    margin-bottom: 18px;
+    justify-content: space-between;
+}
+
+#SECTION3 .calendar-row.days span {
+    width: 29px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+#SECTION3 .calendar-row.nums {
+    justify-content: space-between;
+}
+
+#SECTION3 .calendar-row.nums span {
+    width: 29px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: #010101;
+}
+
+#SECTION3 .calendar-row.nums span.highlight {
+    position: relative;
+    font-weight: 700;
+    color: #f50000;
+    z-index: 1;
+}
+
+#SECTION3 .calendar-row.nums span.highlight::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -4px;
+    left: 2.5px;
+    background-image: url('/assets/images/pngegg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#SECTION3 .event-title {
+    top: 391.8px;
+    left: 57.4285px;
+    width: 318px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 19px;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+#SECTION3 .venue-title {
+    top: 426.8px;
+    left: 68.5005px;
+    width: 275px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+#SECTION3 .venue-address {
+    top: 475.399px;
+    left: 17px;
+    width: 386px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: #010101;
+    line-height: 1.6;
+}
+
+#SECTION3 .map-btn {
+    top: 548.8px;
+    left: 130px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: #f50000;
+    padding: 4px 12px;
+    border: 1px solid #f50000;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.7);
+}
+
+#SECTION3 .map-btn::before {
+    content: '';
+    width: 19.917px;
+    height: 19.917px;
+    background-image: url('https://w.ladicdn.com/s350x350/6322a62f2dad980013bb5005/dia-chi-20240318084501-oy2un.png');
+    background-size: contain;
+    display: inline-block;
+}
+
+#SECTION3 .deco-corner {
+    width: 181px;
+    height: 181px;
+    top: -78.2px;
+    left: -71.5px;
+    background-image: url('https://w.ladicdn.com/s500x500/6322a62f2dad980013bb5005/3-20240504043622-9louq.png');
+    background-size: cover;
+    transform: rotate(7deg);
+    opacity: 0.6;
+}
+
+/* Section 4 */
+#SECTION4 {
+    height: 607.001px;
+}
+
+#SECTION4 .floral-bg {
+    width: 432.857px;
+    height: 606.001px;
+    top: 1px;
+    left: 0;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    filter: brightness(103%);
+}
+
+#SECTION4 .banner {
+    width: 420px;
+    height: 126px;
+    top: -1.067px;
+    left: 0;
+    background-image: url('/assets/image/NLV_48766.png');
+    background-size: cover;
+}
+
+#SECTION4 .banner-gradient {
+    width: 420.5px;
+    height: 55px;
+    top: 69.933px;
+    left: 0;
+    background: linear-gradient(rgba(253,251,251,0), rgba(31,31,31,0.3));
+}
+
+#SECTION4 .title {
+    top: 69.933px;
+    left: 117.5px;
+    width: 177px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 42px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+#SECTION4 .subtitle {
+    top: 124.933px;
+    left: 121.928px;
+    width: 177px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 31px;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+#SECTION4 .timeline {
+    top: 211.799px;
+    left: 65.6025px;
+    width: 312.652px;
+}
+
+#SECTION4 .timeline-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+#SECTION4 .timeline-row .icon {
+    width: 20px;
+    height: 20px;
+    background-image: url('https://w.ladicdn.com/s350x350/6322a62f2dad980013bb5005/4-20240504065031-8rh9l.png');
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+#SECTION4 .timeline-row .time {
+    width: 72px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 22.67px;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+#SECTION4 .timeline-row .line {
+    width: 29px;
+    height: 1px;
+    background: #1a1a1a;
+}
+
+#SECTION4 .timeline-row .desc {
+    flex: 1;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: #010101;
+}
+
+#SECTION4 .closing {
+    top: 474.399px;
+    left: 56.4285px;
+    width: 330px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: #010101;
+    line-height: 1.9;
+}
+
+#SECTION4 .deco-right {
+    width: 251px;
+    height: 251px;
+    top: 102.466px;
+    left: 257px;
+    background-image: url('https://w.ladicdn.com/s600x600/6322a62f2dad980013bb5005/5-20240504065618-gfgxb.png');
+    background-size: cover;
+    transform: rotate(-2deg);
+}
+
+/* Section 5 */
+#SECTION5 {
+    height: 1731.3px;
+}
+
+#SECTION5 .floral-mid {
+    width: 420px;
+    height: 588.001px;
+    top: 588.001px;
+    left: 0;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    filter: brightness(103%);
+}
+
+#SECTION5 .floral-bottom {
+    width: 420px;
+    height: 588.001px;
+    top: 1176px;
+    left: 0;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    transform: rotateX(180deg);
+    filter: brightness(103%);
+}
+
+#SECTION5 .header-photo {
+    width: 288px;
+    height: 120px;
+    top: 20.3969px;
+    left: 0;
+    background-image: url('https://w.ladicdn.com/s600x450/6322a62f2dad980013bb5005/f2eb5e799e33df2c84da2d8d93e0e7dc-20240504071427-ipde3.jpg');
+    background-size: cover;
+}
+
+#SECTION5 .header-frame {
+    width: 352px;
+    height: 200px;
+    top: 0;
+    left: 49px;
+    border: 2px solid rgb(243,221,183);
+    border-radius: 4px;
+}
+
+#SECTION5 .header-label {
+    top: 151.932px;
+    left: 58.75px;
+    width: 112px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 26px;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+#SECTION5 .color-dots {
+    position: absolute;
+    top: 29.397px;
+    left: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#SECTION5 .color-dots .dot {
+    width: 30.152px;
+    height: 30.152px;
+    border-radius: 50%;
+}
+
+#SECTION5 .deco-divider {
+    width: 136.824px;
+    height: 114.785px;
+    top: 205px;
+    left: 132.238px;
+    background-image: url('https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-2-20240504032708-lxlbj.png');
+    background-size: cover;
+}
+
+#SECTION5 .photo-left-1 {
+    width: 205px;
+    height: 278px;
+    top: 319.785px;
+    left: 0;
+    background-image: url('/assets/image/NLV_3791.png');
+    background-size: cover;
+}
+
+#SECTION5 .photo-right-1 {
+    width: 257px;
+    height: 177px;
+    top: 507.785px;
+    left: 163px;
+    background-image: url('/assets/image/NLV_2819.png');
+    background-size: cover;
+}
+
+#SECTION5 .script-save {
+    top: 300.711px;
+    left: 148px;
+    width: 193px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 70.31px;
+    color: #000;
+    transform: rotate(-12deg);
+}
+
+#SECTION5 .script-the {
+    top: 360.785px;
+    left: 229px;
+    width: 106px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 52.76px;
+    color: #000;
+    transform: rotate(-4deg);
+}
+
+#SECTION5 .script-date {
+    top: 407.785px;
+    left: 170.75px;
+    width: 212px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 77.26px;
+    color: #000;
+    transform: rotate(-18deg);
+}
+
+#SECTION5 .deco-leaf {
+    width: 60.704px;
+    height: 50.9262px;
+    top: 360.785px;
+    left: 312px;
+    background-image: url('https://w.ladicdn.com/s400x400/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-12-20240504073148-qcodz.png');
+    background-size: cover;
+    transform: rotate(17deg);
+}
+
+#SECTION5 .gallery-label {
+    top: 629.798px;
+    left: 34.238px;
+    width: 96px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+#SECTION5 .gallery {
+    top: 713.297px;
+    left: 15.711px;
+    width: 388.578px;
+    display: grid;
+    grid-template-columns: 187.5px 187.5px;
+    gap: 13px;
+}
+
+#SECTION5 .gallery .photo {
+    width: 187.5px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 20px -17px #000;
+}
+
+#SECTION5 .gallery .photo.tall {
+    height: 245px;
+}
+
+#SECTION5 .gallery .photo.short {
+    height: 116px;
+}
+
+/* Section 6 */
+#SECTION6 {
+    height: 1030.2px;
+}
+
+#SECTION6 .floral-top {
+    width: 420px;
+    height: 588.001px;
+    top: 32.701px;
+    left: 0;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    transform: rotateX(180deg);
+    filter: brightness(103%);
+}
+
+#SECTION6 .floral-bottom {
+    width: 420px;
+    height: 588.001px;
+    top: 650.797px;
+    left: 0;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    transform: rotateX(180deg);
+    filter: brightness(103%);
+}
+
+#SECTION6 .deco-header {
+    width: 420px;
+    height: 352.349px;
+    background-image: url('https://w.ladicdn.com/s750x700/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-6-20240504074422-a9vch.png');
+    background-size: cover;
+}
+
+#SECTION6 .title {
+    top: 221.59px;
+    left: 25px;
+    width: 370px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 33.59px;
+    color: #1f1f1f;
+    letter-spacing: 2px;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+#SECTION6 .desc {
+    top: 289.1px;
+    left: 20.5px;
+    width: 379px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: #010101;
+    line-height: 1.9;
+}
+
+#SECTION6 .rsvp-form {
+    top: 383.797px;
+    left: 18.961px;
+    width: 382.078px;
+    padding: 20px;
+    border: 1px solid #1a1a1a;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.7);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#SECTION6 .rsvp-form input,
+#SECTION6 .rsvp-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(26,26,26,0.3);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    background: rgba(255,255,255,0.85);
+}
+
+#SECTION6 .rsvp-form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1a1a1a;
+    border-radius: 28px;
+    background: transparent;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 19px;
+    color: #1a1a1a;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+#SECTION6 .confirm-btns {
+    top: 598.797px;
+    left: 18.961px;
+    width: 382.078px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#SECTION6 .confirm-btns button {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #1a1a1a;
+    border-radius: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1a1a1a;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+
+#SECTION6 .thanks {
+    top: 722.1px;
+    left: 20.5px;
+    width: 379px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: #010101;
+    line-height: 1.9;
+}
+
+#SECTION6 .deco-divider {
+    width: 136.824px;
+    height: 114.785px;
+    top: 764.7px;
+    left: 141.588px;
+    background-image: url('https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-2-20240504032708-lxlbj.png');
+    background-size: cover;
+}
+
+#SECTION6 .countdown-title {
+    top: 846.59px;
+    left: 25px;
+    width: 370px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 33.59px;
+    color: #1f1f1f;
+    letter-spacing: 2px;
+}
+
+#SECTION6 .countdown {
+    top: 907.797px;
+    left: 50px;
+    width: 320px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#SECTION6 .countdown .box {
+    width: 61px;
+    height: 61px;
+    border: 1px solid #f3ddb5;
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+    background: rgba(255,255,255,0.7);
+}
+
+#SECTION6 .countdown .box span {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+/* Section 7 */
+#SECTION7 {
+    height: 653.52px;
+}
+
+#SECTION7 .closing-photo {
+    width: 420px;
+    height: 653.52px;
+    top: 0;
+    left: 0;
+    background-image: url('/assets/image/NLV_3430.png');
+    background-size: cover;
+}
+
+#SECTION7 .overlay-frame {
+    width: 420px;
+    height: 420px;
+    top: 0;
+    left: 0;
+    background-image: url('https://w.ladicdn.com/s750x750/6322a62f2dad980013bb5005/9-20240504075902-vdfvq.png');
+    background-size: cover;
+}
+
+#SECTION7 .quote {
+    top: 46.9px;
+    left: 20.5px;
+    width: 379px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #fff;
+    line-height: 1.9;
+    text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 30px #000;
+}
+
+#SECTION7 .thank-you {
+    top: 557.39px;
+    left: 0;
+    width: 411px;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 37.32px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 30px #000;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes wobble {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(-25%) rotate(-5deg); }
+    30% { transform: translateX(20%) rotate(3deg); }
+    45% { transform: translateX(-15%) rotate(-3deg); }
+    60% { transform: translateX(10%) rotate(2deg); }
+    75% { transform: translateX(-5%) rotate(-1deg); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes tada {
+    0% { transform: scale(1); }
+    10%, 20% { transform: scale(0.9) rotate(-3deg); }
+    30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+    40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+    100% { transform: scale(1) rotate(0); }
+}
+
+/* Scroll animation classes (AOS)
+   Progressive enhancement: text only hidden when JS adds .aos-loading class */
+html.aos-loading [data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+html.aos-loading [data-aos].aos-animate {
+    opacity: 1;
+    transform: none !important;
+}
+
+html.aos-loading [data-aos="fade-up"] { transform: translateY(20px); }
+html.aos-loading [data-aos="fade-left"] { transform: translateX(-20px); }
+html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
+
+/* Modal */
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 90000060;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-backdrop.flex {
+    display: flex;
+}
+
+.modal-content {
+    width: 420px;
+    max-width: calc(100% - 40px);
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 30px;
+    background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+    background-size: cover;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #1a1a1a;
+}

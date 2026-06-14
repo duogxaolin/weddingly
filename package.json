@@ -1,0 +1,25 @@
+{
+  "name": "damcuoi",
+  "version": "1.0.0",
+  "description": "Nền tảng website thiệp cưới online mã nguồn mở, giúp các cặp đôi dễ dàng tạo và chia sẻ thiệp cưới của mình.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i assets/css/input.css -o assets/css/app.css --minify",
+    "watch": "tailwindcss -i assets/css/input.css -o assets/css/app.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duogxaolin/weddingly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duogxaolin/weddingly/issues"
+  },
+  "homepage": "https://github.com/duogxaolin/weddingly#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

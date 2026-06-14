@@ -1,0 +1,57 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude / AI assistant
+.claude/
+
+# Backups
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.sql
+*.dump
+
+# Logs & caches
+*.log
+*.cache
+tmp/
+temp/
+
+# Node / build
+node_modules/
+package-lock.json
+postcss.config.js
+
+# Screenshots
+screenshots/
+
+# Composer / vendor
+vendor/
+
+# Images — ảnh không up lên git (đã lưu ở prod/hosting riêng)
+assets/image/
+assets/images/
+assets/img/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.ico
+
+# Old/orphan folders (đã xóa, giữ rule để tránh quay lại)
+demo/
+v2/
+/css/
+/js/
