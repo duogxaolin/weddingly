@@ -1340,54 +1340,157 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: clamp(2rem, 5vw, 5rem);
-    gap: 1.2rem;
+    padding: clamp(1.5rem, 4vw, 3.5rem);
     background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
     background-size: cover;
+    position: relative;
 }
+/* Inner frame with double border — invitation card look */
+.d-hero-inner {
+    position: relative;
+    border: 1px solid rgba(206,152,98,0.55);
+    outline: 1px solid rgba(206,152,98,0.25);
+    outline-offset: 6px;
+    padding: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 4vw, 3.5rem);
+    background: rgba(255, 251, 244, 0.55);
+    backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    max-width: 440px;
+    width: 100%;
+}
+/* Decorative corners */
+.d-corner {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid #ce9862;
+}
+.d-corner.tl { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+.d-corner.tr { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+.d-corner.bl { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+.d-corner.br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
 .d-kicker {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #ce9862;
+    font-weight: 600;
+}
+
+/* Names block with monogram */
+.d-names-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.d-name-top,
+.d-name-bot {
+    font-family: 'Ephesis', cursive;
+    font-size: clamp(2.8rem, 5vw, 3.8rem);
+    line-height: 1;
+    color: #1a1a1a;
+    font-weight: 400;
+}
+.d-monogram {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 6px 0;
+}
+.d-monogram span {
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #ce9862;
+}
+.d-monogram em {
+    font-family: 'Ephesis', cursive;
+    font-style: normal;
+    font-size: 1.8rem;
+    color: #ce9862;
+}
+
+/* Divider with label in the middle */
+.d-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 80%;
+    margin: 4px 0;
+}
+.d-divider::before,
+.d-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ce9862, transparent);
+}
+.d-divider span {
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 4px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     color: #ce9862;
+    white-space: nowrap;
 }
-.d-hero-names {
-    font-family: 'Ephesis', cursive;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    line-height: 1.1;
-    color: #1a1a1a;
-}
-.d-hero-names span {
-    color: #ce9862;
-    font-size: 0.6em;
-    vertical-align: middle;
-}
+
+/* Date row — boxed cells */
 .d-hero-date {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 6px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    color: #1a1a1a;
 }
-.d-hero-date .big {
-    font-size: 2.8rem;
+.d-date-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 14px;
+    min-width: 58px;
+}
+.d-date-cell.big .val { color: #ce9862; }
+.d-date-cell .lbl {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+}
+.d-date-cell .val {
+    font-size: 1.6rem;
     font-weight: 700;
-    color: #ce9862;
+    color: #1a1a1a;
+    line-height: 1.1;
 }
-.d-hero-date .sep { color: #ce9862; }
+.d-date-cell.big .val { font-size: 2.4rem; }
+.d-date-sep {
+    width: 1px;
+    height: 32px;
+    background: rgba(206,152,98,0.4);
+}
+
 .d-hero-invite {
     font-family: 'Ephesis', cursive;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: #1f1f1f;
+}
+.d-hero-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 1px;
 }
 .d-hero-reception {
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-size: 13px;
-    color: #1a1a1a;
+    font-size: 12px;
+    color: #ce9862;
 }
 
 /* Desktop Couple — 2 columns */

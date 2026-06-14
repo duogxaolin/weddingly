@@ -61,7 +61,7 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css?v=7">
+    <link rel="stylesheet" href="/assets/css/style.css?v=8">
 </head>
 <body>
 
@@ -315,13 +315,35 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
     <section class="d-hero">
         <div class="d-hero-photo" style="background-image:url('/assets/image/NLV_3721.png');"></div>
         <div class="d-hero-card">
-            <p class="d-kicker" data-aos="fade-up">Wedding Invitation</p>
-            <h1 class="d-hero-names" data-aos="fade-up">Ngọc Tân <span>&amp;</span> Thu Trang</h1>
-            <div class="d-hero-date" data-aos="fade-up">
-                <span>Thứ 7</span><span class="sep">·</span><span class="big">4</span><span class="sep">·</span><span>Tháng 1, 2025</span>
+            <div class="d-hero-inner">
+                <span class="d-corner tl"></span>
+                <span class="d-corner tr"></span>
+                <span class="d-corner bl"></span>
+                <span class="d-corner br"></span>
+
+                <p class="d-kicker" data-aos="fade-up">— Wedding Invitation —</p>
+                <div class="d-names-block" data-aos="fade-up">
+                    <h2 class="d-name-top">Ngọc Tân</h2>
+                    <div class="d-monogram"><span></span><em>&amp;</em><span></span></div>
+                    <h2 class="d-name-bot">Thu Trang</h2>
+                </div>
+
+                <div class="d-divider" data-aos="fade-up"><span>Save the Date</span></div>
+
+                <div class="d-hero-date" data-aos="fade-up">
+                    <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val">7</span></div>
+                    <div class="d-date-sep"></div>
+                    <div class="d-date-cell big"><span class="lbl">Ngày</span><span class="val">4</span></div>
+                    <div class="d-date-sep"></div>
+                    <div class="d-date-cell"><span class="lbl">Tháng</span><span class="val">01</span></div>
+                    <div class="d-date-sep"></div>
+                    <div class="d-date-cell"><span class="lbl">Năm</span><span class="val">2025</span></div>
+                </div>
+
+                <p class="d-hero-invite" data-aos="fade-up">Trân trọng kính mời</p>
+                <p class="d-hero-time" data-aos="fade-up">16 giờ 30 phút</p>
+                <p class="d-hero-reception" data-aos="fade-up">Reception to Follow</p>
             </div>
-            <p class="d-hero-invite" data-aos="fade-up">Trân trọng kính mời<br>16 giờ 30 phút</p>
-            <p class="d-hero-reception" data-aos="fade-up">Reception to Follow</p>
         </div>
     </section>
 
