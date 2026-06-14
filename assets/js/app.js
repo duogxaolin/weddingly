@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return window.matchMedia('(min-width: 768px)').matches;
     }
 
-    // Responsive scale: keep the 420px pixel-perfect layout, but shrink it to fit narrower screens
+    // Responsive scale: keep the 420px pixel-perfect mobile layout, shrunk to fit
+    // narrower screens. On desktop (≥768px) the separate #desktop-main layout is
+    // shown instead, so the mobile canvas needs no scaling there.
     function applyResponsiveScale() {
         const wrap = document.querySelector('.wedding-wrap');
         const scaleWrap = document.querySelector('.responsive-scale');

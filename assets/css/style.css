@@ -1314,13 +1314,46 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
     color: #1a1a1a;
 }
 
+/* Lush floral corners framing every desktop section (like mobile's deco-corner) */
+.d-couple,
+.d-event,
+.d-timeline,
+.d-gallery,
+.d-gift {
+    position: relative;
+}
+
 .d-section-title {
+    position: relative;
+    z-index: 1;
     font-family: 'Ephesis', cursive;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
     text-align: center;
     color: #1f1f1f;
-    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: clamp(2.2rem, 4vw, 3.5rem);
     letter-spacing: 1px;
+}
+.d-section-title::before {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 70px;
+    margin: 0 auto 0.3rem;
+    background-image: url('https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-2-20240504082626-p3p_x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.d-section-title::after {
+    content: '';
+    display: block;
+    width: 160px;
+    height: 44px;
+    margin: 0.6rem auto 0;
+    background-image: url('https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-2-20240504032708-lxlbj.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Desktop Hero — split screen */
@@ -1344,41 +1377,106 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
     background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 /* Inner frame with double border — invitation card look */
 .d-hero-inner {
     position: relative;
-    border: 1px solid rgba(206,152,98,0.55);
-    outline: 1px solid rgba(206,152,98,0.25);
-    outline-offset: 6px;
-    padding: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 4vw, 3.5rem);
-    background: rgba(255, 251, 244, 0.55);
-    backdrop-filter: blur(1px);
+    z-index: 2;
+    border: 1px solid rgba(110,125,87,0.55);
+    outline: 1px solid rgba(110,125,87,0.25);
+    outline-offset: 8px;
+    padding: clamp(3rem, 6vw, 5rem) clamp(2.5rem, 5vw, 4rem);
+    background: rgba(255, 251, 244, 0.62);
+    backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.1rem;
-    max-width: 440px;
-    width: 100%;
+    gap: 1.4rem;
+    max-width: 560px;
+    width: 92%;
 }
 /* Decorative corners */
 .d-corner {
     position: absolute;
     width: 22px;
     height: 22px;
-    border: 1.5px solid #ce9862;
+    border: 1.5px solid #6e7d57;
 }
 .d-corner.tl { top: -2px; left: -2px; border-right: none; border-bottom: none; }
 .d-corner.tr { top: -2px; right: -2px; border-left: none; border-bottom: none; }
 .d-corner.bl { bottom: -2px; left: -2px; border-right: none; border-top: none; }
 .d-corner.br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
 
+/* Eucalyptus clusters on the 4 corners of the inner frame */
+.d-floral-corner {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    background-image: url('https://w.ladicdn.com/s500x500/6322a62f2dad980013bb5005/3-20240504043622-9louq.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+.d-floral-corner.tl { top: -40px; left: -40px; }
+.d-floral-corner.tr { top: -40px; right: -40px; transform: scaleX(-1); }
+.d-floral-corner.bl { bottom: -40px; left: -40px; transform: scaleY(-1); }
+.d-floral-corner.br { bottom: -40px; right: -40px; transform: scale(-1,-1); }
+
+/* Monogram wreath — circular greenery medallion with initials (references the botanical invitation) */
+.d-wreath {
+    position: relative;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    border: 1px solid rgba(110,125,87,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(255,251,244,0.75) 62%, rgba(255,251,244,0.15));
+    margin-bottom: 4px;
+}
+.d-wreath::before,
+.d-wreath::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 78px;
+    height: 52px;
+    background-image: url('https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-2-20240504082626-p3p_x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateX(-50%);
+}
+.d-wreath::before { top: -26px; }
+.d-wreath::after { bottom: -26px; transform: translateX(-50%) rotate(180deg); }
+.d-wreath span {
+    font-family: 'Ephesis', cursive;
+    font-size: 2.6rem;
+    color: #6e7d57;
+    line-height: 1;
+}
+
+/* Floral bottom ornament */
+.d-floral-bottom {
+    width: 170px;
+    height: 130px;
+    background-image: url('https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-2-20240504082626-p3p_x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+    margin-top: 8px;
+}
+
 .d-kicker {
     font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     text-transform: uppercase;
-    font-size: 13px;
-    color: #ce9862;
+    font-size: 14px;
+    color: #6e7d57;
     font-weight: 600;
 }
 
@@ -1391,7 +1489,7 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
 .d-name-top,
 .d-name-bot {
     font-family: 'Ephesis', cursive;
-    font-size: clamp(2.8rem, 5vw, 3.8rem);
+    font-size: clamp(3.2rem, 6vw, 4.6rem);
     line-height: 1;
     color: #1a1a1a;
     font-weight: 400;
@@ -1399,43 +1497,45 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
 .d-monogram {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin: 6px 0;
+    gap: 16px;
+    margin: 8px 0;
 }
 .d-monogram span {
     display: block;
-    width: 50px;
+    width: 64px;
     height: 1px;
-    background: #ce9862;
+    background: #6e7d57;
 }
 .d-monogram em {
     font-family: 'Ephesis', cursive;
     font-style: normal;
-    font-size: 1.8rem;
-    color: #ce9862;
+    font-size: 2.2rem;
+    color: #6e7d57;
 }
 
-/* Divider with label in the middle */
+/* Divider with floral leaves and label in the middle */
 .d-divider {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 14px;
-    width: 80%;
+    width: 90%;
     margin: 4px 0;
 }
-.d-divider::before,
-.d-divider::after {
-    content: '';
+.d-divider .d-div-leaf {
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #ce9862, transparent);
+    max-width: 120px;
+    background: linear-gradient(90deg, transparent, #6e7d57, transparent);
+    position: relative;
 }
-.d-divider span {
+.d-divider .d-div-leaf.right { transform: scaleX(-1); }
+.d-divider .d-div-text {
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 4px;
     text-transform: uppercase;
-    font-size: 12px;
-    color: #ce9862;
+    font-size: 13px;
+    color: #6e7d57;
     white-space: nowrap;
 }
 
@@ -1443,54 +1543,54 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
 .d-hero-date {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     font-family: 'Cormorant Garamond', serif;
 }
 .d-date-cell {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8px 14px;
-    min-width: 58px;
+    padding: 10px 16px;
+    min-width: 64px;
 }
-.d-date-cell.big .val { color: #ce9862; }
+.d-date-cell.big .val { color: #6e7d57; }
 .d-date-cell .lbl {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #999;
 }
 .d-date-cell .val {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #1a1a1a;
     line-height: 1.1;
 }
-.d-date-cell.big .val { font-size: 2.4rem; }
+.d-date-cell.big .val { font-size: 3rem; }
 .d-date-sep {
     width: 1px;
-    height: 32px;
-    background: rgba(206,152,98,0.4);
+    height: 42px;
+    background: rgba(110,125,87,0.4);
 }
 
 .d-hero-invite {
     font-family: 'Ephesis', cursive;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: #1f1f1f;
 }
 .d-hero-time {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     font-weight: 600;
     color: #1a1a1a;
     letter-spacing: 1px;
 }
 .d-hero-reception {
     font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    font-size: 12px;
-    color: #ce9862;
+    font-size: 13px;
+    color: #6e7d57;
 }
 
 /* Desktop Couple — 2 columns */
@@ -1506,64 +1606,71 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
     align-items: center;
 }
 .d-person {
-    background: rgba(255,255,255,0.75);
-    border-radius: 12px;
-    padding: 2rem;
+    position: relative;
+    background: rgba(255, 251, 244, 0.5);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(110,125,87,0.4);
+    border-radius: 14px;
+    padding: 2.5rem 2rem;
     text-align: center;
-    box-shadow: 0 8px 30px -15px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 40px -18px rgba(0,0,0,0.25);
 }
 .d-person-photo {
-    width: 200px;
-    height: 260px;
+    width: 240px;
+    height: 310px;
     margin: 0 auto 1.5rem;
     background-size: cover;
     background-position: center;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px -12px rgba(0,0,0,0.4);
 }
 .d-person-label {
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 3px;
-    font-size: 14px;
-    color: #ce9862;
+    font-size: 15px;
+    color: #6e7d57;
     margin-bottom: 0.3rem;
 }
 .d-person-name {
     font-family: 'Ephesis', cursive;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #1f1f1f;
     margin-bottom: 1rem;
 }
 .d-person-quote {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 1.08rem;
+    line-height: 1.85;
     color: #444;
 }
 .d-heart {
     font-family: 'Ephesis', cursive;
-    font-size: 3rem;
-    color: #ce9862;
+    font-size: 3.5rem;
+    color: #6e7d57;
 }
 
 /* Desktop Event — calendar + venue */
 .d-event {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 3rem);
+    padding: clamp(3.5rem, 6vw, 6.5rem) clamp(1rem, 4vw, 3rem);
 }
 .d-event-grid {
     display: grid;
-    grid-template-columns: minmax(320px, 1fr) 1fr;
+    grid-template-columns: minmax(360px, 1fr) 1fr;
     gap: clamp(1.5rem, 4vw, 3rem);
     align-items: stretch;
 }
 .d-calendar-card,
 .d-venue-card {
-    background: rgba(255,255,255,0.8);
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 8px 30px -15px rgba(0,0,0,0.2);
+    position: relative;
+    background: rgba(255, 251, 244, 0.5);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(110,125,87,0.4);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 40px -18px rgba(0,0,0,0.25);
 }
 .d-cal-monthyear {
     font-family: 'Cormorant Garamond', serif;
@@ -1571,7 +1678,7 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
     letter-spacing: 3px;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: #ce9862;
+    color: #6e7d57;
 }
 .d-cal-row {
     display: grid;
@@ -1587,19 +1694,27 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
 }
 .d-cal-row span {
     color: #1a1a1a;
-    font-size: 1.05rem;
-    padding: 4px 0;
+    font-size: 1.2rem;
+    padding: 6px 0;
 }
 .d-cal-row span.muted { color: #aaa; }
+/* Highlighted wedding day — red stamp circle like mobile */
 .d-cal-row span.hl {
-    background: #ce9862;
-    color: #fff;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    line-height: 24px;
-    margin: 0 auto;
+    position: relative;
+    color: #f50000;
     font-weight: 700;
+}
+.d-cal-row span.hl::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 38px;
+    height: 38px;
+    transform: translate(-50%, -50%);
+    border: 1.5px solid #f50000;
+    border-radius: 50%;
+    opacity: 0.65;
 }
 .d-venue-card {
     display: flex;
@@ -1617,59 +1732,117 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
 }
 .d-venue-title {
     font-family: 'Ephesis', cursive;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #1f1f1f;
     margin-bottom: 1rem;
 }
 .d-venue-address {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1.25rem;
+    line-height: 1.8;
     color: #444;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
 }
 .d-map-btn {
     display: inline-block;
-    padding: 10px 28px;
-    border: 1px solid #ce9862;
-    border-radius: 24px;
-    color: #ce9862;
+    padding: 12px 32px;
+    border: 1px solid #6e7d57;
+    border-radius: 28px;
+    color: #6e7d57;
     font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
     font-weight: 600;
     transition: all 0.2s;
 }
-.d-map-btn:hover { background: #ce9862; color: #fff; }
+.d-map-btn:hover { background: #6e7d57; color: #fff; }
 
-/* Desktop Timeline — 3 cards */
+/* Desktop Timeline — banner + icon/time/line/desc rows (mobile style) */
 .d-timeline {
     max-width: 1100px;
     margin: 0 auto;
-    padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 3rem);
+    padding: clamp(3.5rem, 6vw, 6.5rem) clamp(1rem, 4vw, 3rem);
     text-align: center;
 }
-.d-timeline-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-    max-width: 900px;
+.d-tl-banner {
+    position: relative;
+    width: 100%;
+    height: clamp(220px, 30vw, 320px);
+    background-size: cover;
+    background-position: center;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 14px 40px -20px rgba(0,0,0,0.4);
+}
+.d-tl-banner-grad {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.45));
+}
+.d-tl-banner-title {
+    position: relative;
+    font-family: 'Ephesis', cursive;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    line-height: 1;
+}
+.d-tl-banner-sub {
+    position: relative;
+    font-family: 'Ephesis', cursive;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.d-timeline-rows {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
     margin: 0 auto;
 }
-.d-tl-card {
-    background: rgba(255,255,255,0.8);
-    border-radius: 12px;
-    padding: 2rem 1.5rem;
-    box-shadow: 0 8px 30px -15px rgba(0,0,0,0.2);
+.d-tl-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2vw, 24px);
+    padding: 20px 8px;
+    border-bottom: 1px dashed rgba(110,125,87,0.45);
+}
+.d-tl-row:last-child { border-bottom: none; }
+.d-tl-ico {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 auto;
+    background-image: url('https://w.ladicdn.com/s350x350/6322a62f2dad980013bb5005/4-20240504065031-8rh9l.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .d-tl-time {
-    font-family: 'Ephesis', cursive;
-    font-size: 2.8rem;
-    color: #ce9862;
-    margin-bottom: 0.5rem;
+    width: 92px;
+    flex: 0 0 auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+    color: #1a1a1a;
+    text-align: center;
+}
+.d-tl-line {
+    width: clamp(20px, 4vw, 56px);
+    height: 1px;
+    background: #6e7d57;
+    flex: 0 0 auto;
 }
 .d-tl-desc {
+    flex: 1;
+    text-align: left;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: #444;
+    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+    color: #333;
 }
 .d-timeline-note {
     font-family: 'Cormorant Garamond', serif;
@@ -1679,78 +1852,146 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
     margin-top: 2.5rem;
 }
 
-/* Desktop Gallery — auto-fit grid */
+/* Desktop Gallery — dresscode header + rotated "Save the Date" + masonry */
 .d-gallery {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 3rem);
+    padding: clamp(3.5rem, 6vw, 6.5rem) clamp(1rem, 4vw, 3rem);
     text-align: center;
 }
-.d-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: clamp(1rem, 2vw, 1.5rem);
+.d-gallery-head {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0 auto 0.5rem;
 }
-.d-gallery-photo {
-    aspect-ratio: 3 / 4;
+.d-gallery-head-photo {
+    width: 150px;
+    height: 96px;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
-    box-shadow: 0 10px 25px -15px rgba(0,0,0,0.3);
+    border: 1px solid rgba(110,125,87,0.45);
+}
+.d-gallery-head-label {
+    font-family: 'Ephesis', cursive;
+    font-size: 2.4rem;
+    color: #1f1f1f;
+}
+.d-dresscode-dots {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.d-dresscode-dots .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+/* Rotated "Save the Date" script overlay */
+.d-gallery-script {
+    position: relative;
+    z-index: 0;
+    height: 170px;
+    max-width: 560px;
+    margin: 0 auto 0.5rem;
+}
+.d-gallery-script .w {
+    position: absolute;
+    font-family: 'Ephesis', cursive;
+    color: #1a1a1a;
+}
+.d-gallery-script .save { font-size: 5.4rem; top: 0; left: 22%; transform: rotate(-12deg); }
+.d-gallery-script .the { font-size: 3.6rem; top: 38px; left: 46%; transform: rotate(-4deg); }
+.d-gallery-script .date { font-size: 6rem; top: 70px; left: 30%; transform: rotate(-16deg); }
+/* Masonry via CSS columns */
+.d-gallery-grid {
+    position: relative;
+    z-index: 1;
+    columns: 3;
+    column-gap: clamp(12px, 1.5vw, 18px);
+}
+.d-gallery-photo {
+    break-inside: avoid;
+    margin-bottom: clamp(12px, 1.5vw, 18px);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 14px 30px -16px rgba(0,0,0,0.35);
     transition: transform 0.3s;
+}
+/* Vary aspect ratios for a masonry rhythm */
+.d-gallery-photo:nth-child(3n+1) { aspect-ratio: 3 / 4; }
+.d-gallery-photo:nth-child(3n+2) { aspect-ratio: 1 / 1; }
+.d-gallery-photo:nth-child(3n)   { aspect-ratio: 4 / 5; }
+.d-gallery-photo:hover { transform: scale(1.02); }
+.d-gallery-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin-top: 1.8rem;
+    position: relative;
+    z-index: 1;
 }
 .d-gallery-photo:hover { transform: scale(1.03); }
 
 /* Desktop Gift + RSVP */
 .d-gift {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 3rem);
+    padding: clamp(3.5rem, 6vw, 6.5rem) clamp(1rem, 4vw, 3rem);
     text-align: center;
 }
 .d-gift-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(1.5rem, 4vw, 3rem);
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: left;
 }
 .d-rsvp-col,
 .d-bank-col {
-    background: rgba(255,255,255,0.85);
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 8px 30px -15px rgba(0,0,0,0.2);
+    position: relative;
+    background: rgba(255, 251, 244, 0.55);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(110,125,87,0.4);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 40px -18px rgba(0,0,0,0.25);
 }
 .d-rsvp-col h3 {
     font-family: 'Ephesis', cursive;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     text-align: center;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.4rem;
     color: #1f1f1f;
 }
 .d-rsvp-col input,
 .d-rsvp-col textarea {
     width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 12px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
     border: 1px solid rgba(26,26,26,0.3);
-    border-radius: 8px;
+    border-radius: 10px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
+    font-size: 16px;
     background: rgba(255,255,255,0.9);
 }
 .d-rsvp-col button {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ce9862;
-    border-radius: 24px;
-    background: #ce9862;
+    padding: 14px;
+    border: 1px solid #6e7d57;
+    border-radius: 28px;
+    background: #6e7d57;
     color: #fff;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: 1px;
     cursor: pointer;
 }
@@ -1765,7 +2006,7 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
     font-family: 'Cormorant Garamond', serif;
     font-size: 14px;
 }
-.d-wish strong { color: #ce9862; }
+.d-wish strong { color: #6e7d57; }
 
 .d-bank-col {
     display: flex;
@@ -1773,53 +2014,55 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
     align-items: center;
     gap: 1rem;
 }
-.d-qr { width: 220px; height: 220px; }
+.d-qr { width: 250px; height: 250px; }
 .d-qr img { width: 100%; height: 100%; object-fit: contain; }
 .d-bank-info { text-align: center; width: 100%; }
-.d-bank-role { font-family: 'Cormorant Garamond', serif; letter-spacing: 3px; color: #ce9862; font-size: 13px; }
-.d-bank-holder { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.3rem; }
-.d-bank-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #555; }
-.d-bank-num { font-family: monospace; font-size: 1.4rem; font-weight: 700; letter-spacing: 2px; margin: 0.5rem 0; }
+.d-bank-role { font-family: 'Cormorant Garamond', serif; letter-spacing: 3px; color: #6e7d57; font-size: 14px; }
+.d-bank-holder { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.5rem; }
+.d-bank-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #555; }
+.d-bank-num { font-family: monospace; font-size: 1.6rem; font-weight: 700; letter-spacing: 2px; margin: 0.6rem 0; }
 .d-copy-btn {
     padding: 8px 20px;
-    border: 1px solid #ce9862;
+    border: 1px solid #6e7d57;
     border-radius: 20px;
     background: transparent;
-    color: #ce9862;
+    color: #6e7d57;
     cursor: pointer;
     font-family: 'Cormorant Garamond', serif;
     font-size: 14px;
 }
-.d-copy-btn:hover { background: #ce9862; color: #fff; }
+.d-copy-btn:hover { background: #6e7d57; color: #fff; }
 
 .d-countdown {
-    margin-top: 3rem;
+    margin-top: 3.5rem;
+    position: relative;
+    z-index: 1;
 }
 .d-countdown h3 {
     font-family: 'Ephesis', cursive;
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #1f1f1f;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
 }
-.d-countdown #countdown {
+.d-countdown .cd-desktop {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     justify-content: center;
 }
 .d-countdown .box {
-    width: 80px;
-    height: 80px;
-    border: 1px solid #ce9862;
-    border-radius: 12px;
+    width: 95px;
+    height: 95px;
+    border: 1px solid #6e7d57;
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.75);
     font-family: 'Cormorant Garamond', serif;
 }
-.d-countdown .box b { font-size: 1.8rem; color: #1a1a1a; }
-.d-countdown .box span { font-size: 11px; text-transform: uppercase; color: #777; }
+.d-countdown .box b { font-size: 2.2rem; color: #1a1a1a; }
+.d-countdown .box span { font-size: 12px; text-transform: uppercase; color: #777; }
 
 /* Desktop Closing */
 .d-closing {
@@ -1863,6 +2106,6 @@ html.aos-loading [data-aos="fade-right"] { transform: translateX(20px); }
 /* Large desktop refinements */
 @media (min-width: 1024px) {
     .d-hero { grid-template-columns: 55% 45%; }
-    .d-gallery-grid { grid-template-columns: repeat(4, 1fr); }
+    .d-gallery-grid { columns: 4; }
 }
 

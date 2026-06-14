@@ -61,7 +61,7 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css?v=8">
+    <link rel="stylesheet" href="/assets/css/style.css?v=14">
 </head>
 <body>
 
@@ -320,6 +320,12 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
                 <span class="d-corner tr"></span>
                 <span class="d-corner bl"></span>
                 <span class="d-corner br"></span>
+                <span class="d-floral-corner tl"></span>
+                <span class="d-floral-corner tr"></span>
+                <span class="d-floral-corner bl"></span>
+                <span class="d-floral-corner br"></span>
+
+                <div class="d-wreath" data-aos="fade-up"><span>N&amp;T</span></div>
 
                 <p class="d-kicker" data-aos="fade-up">— Wedding Invitation —</p>
                 <div class="d-names-block" data-aos="fade-up">
@@ -328,7 +334,11 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
                     <h2 class="d-name-bot">Thu Trang</h2>
                 </div>
 
-                <div class="d-divider" data-aos="fade-up"><span>Save the Date</span></div>
+                <div class="d-divider" data-aos="fade-up">
+                    <span class="d-div-leaf left"></span>
+                    <span class="d-div-text">Save the Date</span>
+                    <span class="d-div-leaf right"></span>
+                </div>
 
                 <div class="d-hero-date" data-aos="fade-up">
                     <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val">6</span></div>
@@ -343,6 +353,8 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
                 <p class="d-hero-invite" data-aos="fade-up">Trân trọng kính mời</p>
                 <p class="d-hero-time" data-aos="fade-up">16 giờ 30 phút</p>
                 <p class="d-hero-reception" data-aos="fade-up">Reception to Follow</p>
+
+                <div class="d-floral-bottom"></div>
             </div>
         </div>
     </section>
@@ -391,34 +403,63 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
         </div>
     </section>
 
-    <!-- TIMELINE -->
+    <!-- TIMELINE (mobile style: banner + icon/time/line/desc rows) -->
     <section class="d-timeline">
-        <h2 class="d-section-title" data-aos="fade-up">Sự kiện quan trọng</h2>
-        <div class="d-timeline-grid">
-            <div class="d-tl-card" data-aos="fade-up">
-                <div class="d-tl-time">16:30</div>
-                <p class="d-tl-desc">Đón tiếp khách mời</p>
+        <div class="d-tl-banner" style="background-image:url('/assets/image/NLV_48766.png');">
+            <div class="d-tl-banner-grad"></div>
+            <h2 class="d-tl-banner-title" data-aos="fade-up">Sự kiện</h2>
+            <p class="d-tl-banner-sub" data-aos="fade-up">quan trọng</p>
+        </div>
+        <div class="d-timeline-rows" data-aos="fade-up">
+            <div class="d-tl-row">
+                <span class="d-tl-ico"></span>
+                <span class="d-tl-time">16:30</span>
+                <span class="d-tl-line"></span>
+                <span class="d-tl-desc">Đón tiếp khách mời</span>
             </div>
-            <div class="d-tl-card" data-aos="fade-up">
-                <div class="d-tl-time">17:00</div>
-                <p class="d-tl-desc">Tiệc mừng cưới</p>
+            <div class="d-tl-row">
+                <span class="d-tl-ico"></span>
+                <span class="d-tl-time">17:00</span>
+                <span class="d-tl-line"></span>
+                <span class="d-tl-desc">Tiệc mừng cưới</span>
             </div>
-            <div class="d-tl-card" data-aos="fade-up">
-                <div class="d-tl-time">19:00</div>
-                <p class="d-tl-desc">Chương trình văn nghệ mừng hạnh phúc</p>
+            <div class="d-tl-row">
+                <span class="d-tl-ico"></span>
+                <span class="d-tl-time">19:00</span>
+                <span class="d-tl-line"></span>
+                <span class="d-tl-desc">Chương trình văn nghệ mừng hạnh phúc</span>
             </div>
         </div>
         <p class="d-timeline-note" data-aos="fade-up">Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng mình!</p>
     </section>
 
-    <!-- GALLERY -->
+    <!-- GALLERY (mobile style: dresscode header + rotated "Save the Date" + masonry) -->
     <section class="d-gallery">
         <h2 class="d-section-title" data-aos="fade-up">Khoảnh khắc</h2>
+
+        <div class="d-gallery-head" data-aos="fade-up">
+            <div class="d-gallery-head-photo" style="background-image:url('https://w.ladicdn.com/s600x450/6322a62f2dad980013bb5005/f2eb5e799e33df2c84da2d8d93e0e7dc-20240504071427-ipde3.jpg');"></div>
+            <p class="d-gallery-head-label">Dresscode</p>
+            <div class="d-dresscode-dots">
+                <span class="dot" style="background:#1a1a1a;"></span>
+                <span class="dot" style="background:#ce9862;"></span>
+                <span class="dot" style="background:#f3deb7;"></span>
+                <span class="dot" style="border:1px solid #000;background:#fff;"></span>
+            </div>
+        </div>
+
+        <div class="d-gallery-script" aria-hidden="true">
+            <span class="w save">Save</span>
+            <span class="w the">the</span>
+            <span class="w date">Date</span>
+        </div>
+
         <div class="d-gallery-grid">
             <?php foreach ($galleryImages as $img): ?>
             <div class="d-gallery-photo" style="background-image:url('/assets/image/<?= $img ?>.png');" data-aos="fade-up"></div>
             <?php endforeach; ?>
         </div>
+        <p class="d-gallery-date" data-aos="fade-up">03.07.2026</p>
     </section>
 
     <!-- GIFT + RSVP -->
@@ -499,6 +540,6 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
     </div>
 </div>
 
-<script src="/assets/js/app.js?v=7"></script>
+<script src="/assets/js/app.js?v=8"></script>
 </body>
 </html>
