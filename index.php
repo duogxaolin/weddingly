@@ -1,5 +1,5 @@
 <?php
-// Wedding invitation - Vũ Tùng & Phương Anh
+// Wedding invitation - Ngọc Tân & Thu Trang
 // Pixel-perfect reconstruction from LadiPage
 
 // Handle wish submission
@@ -33,12 +33,12 @@ if (file_exists(__DIR__ . '/wishes.json')) {
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Vũ Tùng &amp; Phương Anh</title>
+    <title>Ngọc Tân &amp; Thu Trang</title>
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Trang web chính thức của Vũ Tùng &amp; Phương Anh, nơi chia sẻ những khoảnh khắc đẹp và câu chuyện tình yêu.">
-    <meta property="og:title" content="Vũ Tùng &amp; Phương Anh - Hành trình hạnh phúc">
+    <meta name="description" content="Trang web chính thức của Ngọc Tân &amp; Thu Trang, nơi chia sẻ những khoảnh khắc đẹp và câu chuyện tình yêu.">
+    <meta property="og:title" content="Ngọc Tân &amp; Thu Trang - Hành trình hạnh phúc">
     <meta property="og:type" content="website">
     <meta property="og:image" content="/assets/image/NLV_4876.png">
     <meta property="og:url" content="https://damcuoitungphanh.com">
@@ -73,11 +73,11 @@ if (file_exists(__DIR__ . '/wishes.json')) {
         <div class="ladi-el deco-left ladi-bg"></div>
         <div class="ladi-el deco-square ladi-bg"></div>
 
-            <h1 class="ladi-el title" data-aos="fade-up">VŨ TÙNG &amp; PHƯƠNG ANH</h1>
+            <h1 class="ladi-el title" data-aos="fade-up">NGỌC TÂN &amp; THU TRANG</h1>
         <p class="ladi-el subtitle" data-aos="fade-up">Wedding</p>
         <div class="ladi-el save-date" data-aos="fade-up">Save<br>the<br>date</div>
         <div class="ladi-el names" data-aos="fade-up">
-            <strong>VŨ TÙNG</strong><br>&amp;<br><strong>PHƯƠNG ANH</strong>
+            <strong>NGỌC TÂN</strong><br>&amp;<br><strong>THU TRANG</strong>
         </div>
         <p class="ladi-el invite-text" data-aos="fade-up">Trân trọng kính mời</p>
 
@@ -103,7 +103,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
         <div class="ladi-el bride-portrait-1 ladi-bg" data-aos="fade-right"></div>
         <div class="ladi-el bride-portrait-2 ladi-bg" data-aos="fade-right"></div>
         <p class="ladi-el bride-label" data-aos="fade-up">CÔ DÂU</p>
-        <p class="ladi-el bride-name" data-aos="fade-up">Phương Anh</p>
+        <p class="ladi-el bride-name" data-aos="fade-up">Thu Trang</p>
         <div class="ladi-el bride-quote" data-aos="fade-up">
             "Em đã pha trà,<br>
             Cũng đã cắm hoa<br>
@@ -115,7 +115,7 @@ if (file_exists(__DIR__ . '/wishes.json')) {
         <div class="ladi-el groom-portrait-1 ladi-bg" data-aos="fade-left"></div>
         <div class="ladi-el groom-portrait-2 ladi-bg" data-aos="fade-left"></div>
         <p class="ladi-el groom-label" data-aos="fade-up">CHÚ RỂ</p>
-        <p class="ladi-el groom-name" data-aos="fade-up">Vũ Tùng</p>
+        <p class="ladi-el groom-name" data-aos="fade-up">Ngọc Tân</p>
         <div class="ladi-el groom-quote" data-aos="fade-up">
             "Anh yêu em như anh yêu đất nước<br>
             Vất vả đau thương tươi thắm vô ngần<br>
