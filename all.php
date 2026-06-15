@@ -178,6 +178,21 @@ $cardUrls = array_map(fn($c) => $c['file'], $cards);
             min-height: 24px;
         }
 
+        .hippo-signature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            color: #9aa47e;
+            font-size: .95rem;
+            font-style: italic;
+        }
+        .hippo-signature svg {
+            width: 36px;
+            height: 36px;
+            display: block;
+        }
+
         @media (max-width: 640px) {
             .page-header { flex-direction: column; align-items: flex-start; }
             .card-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -192,6 +207,23 @@ $cardUrls = array_map(fn($c) => $c['file'], $cards);
     <div>
         <h1>Tất cả thiệp mừng</h1>
         <p>Ngọc Tân & Thu Trang — 18 phiên bản khung giờ và ngày</p>
+        <div class="hippo-signature">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="50" cy="58" rx="34" ry="28" fill="#9aa47e"/>
+                <ellipse cx="26" cy="44" rx="12" ry="14" fill="#9aa47e"/>
+                <ellipse cx="74" cy="44" rx="12" ry="14" fill="#9aa47e"/>
+                <ellipse cx="26" cy="44" rx="7" ry="9" fill="#b5c09a"/>
+                <ellipse cx="74" cy="44" rx="7" ry="9" fill="#b5c09a"/>
+                <circle cx="22" cy="40" r="2.5" fill="#2c2c2c"/>
+                <circle cx="70" cy="40" r="2.5" fill="#2c2c2c"/>
+                <ellipse cx="50" cy="64" rx="10" ry="8" fill="#f8f7f3"/>
+                <circle cx="50" cy="62" r="4" fill="#2c2c2c"/>
+                <ellipse cx="44" cy="78" rx="5" ry="4" fill="#f8f7f3"/>
+                <ellipse cx="56" cy="78" rx="5" ry="4" fill="#f8f7f3"/>
+                <path d="M34 52 Q50 48 66 52" stroke="#7b8360" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+            <span>Hippo signature (tạm)</span>
+        </div>
     </div>
     <div class="actions">
         <button class="btn" id="downloadAllBtn" onclick="downloadAll()">⬇ Tải tất cả</button>
