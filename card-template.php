@@ -12,6 +12,13 @@ $weekdayText = match ((int)$day) {
     5, 12, 19, 26 => 'Chủ nhật',
     default => 'Thứ 6',
 };
+$day2 = (int)$day + 1;
+$weekdayText2 = match ($day2) {
+    3, 10, 17, 24, 31 => 'Thứ 6',
+    4, 11, 18, 25 => 'Thứ 7',
+    5, 12, 19, 26 => 'Chủ nhật',
+    default => 'Thứ 6',
+};
 
 if (!isset($multiDate)) $multiDate = false;
 if (!isset($slug)) $slug = 'thiep-cuoi-ngoc-tan-thu-trang';
@@ -349,6 +356,23 @@ $dateDisplay = $multiDate
             flex-shrink: 0;
         }
 
+        .d-multi-date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            margin: 8px 0;
+        }
+        .d-multi-date .d-hero-date {
+            margin: 0;
+        }
+        .d-multi-date-sep {
+            font-family: 'Ephesis', cursive;
+            font-size: 1.6rem;
+            color: #9aa47e;
+            line-height: 1;
+        }
+
         .d-hero-invite {
             font-family: 'Ephesis', cursive;
             font-size: 2.4rem;
@@ -460,7 +484,27 @@ $dateDisplay = $multiDate
                     </div>
 
                     <?php if ($multiDate): ?>
-                        <p class="d-date-full"><?= htmlspecialchars($dateDisplay) ?></p>
+                        <div class="d-multi-date">
+                            <div class="d-hero-date">
+                                <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val"><?= htmlspecialchars($weekdayText) ?></span></div>
+                                <div class="d-date-sep"></div>
+                                <div class="d-date-cell big"><span class="lbl">Ngày</span><span class="val"><?= htmlspecialchars($day) ?></span></div>
+                                <div class="d-date-sep"></div>
+                                <div class="d-date-cell"><span class="lbl">Tháng</span><span class="val"><?= htmlspecialchars($month) ?></span></div>
+                                <div class="d-date-sep"></div>
+                                <div class="d-date-cell"><span class="lbl">Năm</span><span class="val"><?= htmlspecialchars($year) ?></span></div>
+                            </div>
+                            <span class="d-multi-date-sep">và</span>
+                            <div class="d-hero-date">
+                                <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val"><?= htmlspecialchars($weekdayText2) ?></span></div>
+                                <div class="d-date-sep"></div>
+                                <div class="d-date-cell big"><span class="lbl">Ngày</span><span class="val"><?= htmlspecialchars($day2) ?></span></div>
+                                <div class="d-date-sep"></div>
+                                <div class="d-date-cell"><span class="lbl">Tháng</span><span class="val"><?= htmlspecialchars($month) ?></span></div>
+                                <div class="d-date-sep"></div>
+                                <div class="d-date-cell"><span class="lbl">Năm</span><span class="val"><?= htmlspecialchars($year) ?></span></div>
+                            </div>
+                        </div>
                     <?php else: ?>
                         <div class="d-hero-date">
                             <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val"><?= htmlspecialchars($weekdayText) ?></span></div>
