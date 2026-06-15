@@ -82,7 +82,7 @@ $dateDisplay = $multiDate
             position: relative;
             width: 720px;
             height: 1280px;
-            background: #f8f7f3;
+            background: linear-gradient(160deg, #7d8564 0%, #6e7655 100%);
             overflow: hidden;
             box-shadow: 0 30px 80px -30px rgba(0,0,0,0.35);
             display: flex;
@@ -94,11 +94,12 @@ $dateDisplay = $multiDate
         .hero-inner {
             position: relative;
             z-index: 2;
-            border: 1px solid rgba(154, 164, 126, 0.55);
-            outline: 1px solid rgba(154, 164, 126, 0.25);
+            border: 1px solid rgba(248, 247, 243, 0.55);
+            outline: 1px solid rgba(248, 247, 243, 0.25);
             outline-offset: 6px;
             padding: 40px 22px 30px;
-            background: rgba(255, 255, 252, 0.82);
+            background: rgba(248, 247, 243, 0.95);
+            box-shadow: 0 24px 70px -20px rgba(0,0,0,0.25);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -471,7 +472,7 @@ $dateDisplay = $multiDate
             scale: 2,
             useCORS: true,
             allowTaint: true,
-            backgroundColor: '#f8f7f3',
+            backgroundColor: '#7d8564',
             logging: false,
             width: 720,
             height: 1280,
