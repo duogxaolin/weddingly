@@ -545,6 +545,13 @@ $dateDisplay = $multiDate
     document.getElementById('printBtn').addEventListener('click', function () {
         window.print();
     });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('download') === 'auto') {
+        setTimeout(function () {
+            document.getElementById('downloadBtn').click();
+        }, 1800);
+    }
 </script>
 
 </body>
