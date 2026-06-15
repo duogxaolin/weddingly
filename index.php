@@ -61,7 +61,7 @@ $galleryImages = ['NLV_3594','NLV_4011','NLV_3768','NLV_5889','NLV_5440','NLV_43
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css?v=14">
+    <link rel="stylesheet" href="/assets/css/style.css?v=16">
 </head>
 <body>
 
