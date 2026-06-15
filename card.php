@@ -1,5 +1,5 @@
 <?php
-// Standalone wedding invitation card - Ngọc Tân & Thu Trang
+// Standalone wedding invitation card — replica of desktop hero from index.php
 $brideName = 'Thu Trang';
 $groomName = 'Ngọc Tân';
 $weekday = 'Thứ 6';
@@ -7,6 +7,8 @@ $day = '3';
 $month = '07';
 $year = '2026';
 $time = '16 giờ 30 phút';
+$monogram = 'N&T';
+$photo = '/assets/image/NLV_3721.png';
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -16,7 +18,7 @@ $time = '16 giờ 30 phút';
     <title>Thiệp cưới <?= htmlspecialchars($groomName) ?> & <?= htmlspecialchars($brideName) ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body {
@@ -55,7 +57,6 @@ $time = '16 giờ 30 phút';
         }
         .btn-outline:hover { background: #6e7d57; color: #fff; }
 
-        /* Card stage */
         .stage {
             display: flex;
             align-items: center;
@@ -65,138 +66,243 @@ $time = '16 giờ 30 phút';
             min-height: 0;
         }
 
-        /* Landscape invitation card — 1920 x 1080 Full HD */
+        /* Replica of desktop hero */
         #invitation-card {
             position: relative;
             width: 1920px;
             height: 1080px;
-            background: #ffffff;
-            color: #1a1a1a;
+            background: #faf6ee;
             overflow: hidden;
             box-shadow: 0 30px 80px -30px rgba(0,0,0,0.35);
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 55% 45%;
         }
 
-        /* Top white content area */
-        .card-top {
+        .hero-photo {
+            background-image: url('<?= htmlspecialchars($photo) ?>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 70px;
+            background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
+            background-size: cover;
+            background-position: center;
             position: relative;
-            flex: 1;
+            overflow: hidden;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            border: 1px solid rgba(110,125,87,0.55);
+            outline: 1px solid rgba(110,125,87,0.25);
+            outline-offset: 8px;
+            padding: 50px 55px;
+            background: rgba(255, 251, 244, 0.82);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            max-width: 540px;
+            width: 92%;
+        }
+
+        /* Decorative corners */
+        .d-corner {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border: 1.5px solid #6e7d57;
+        }
+        .d-corner.tl { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+        .d-corner.tr { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+        .d-corner.bl { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+        .d-corner.br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+        .d-floral-corner {
+            position: absolute;
+            width: 96px;
+            height: 96px;
+            background-image: url('https://w.ladicdn.com/s500x500/6322a62f2dad980013bb5005/3-20240504043622-9louq.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            pointer-events: none;
+        }
+        .d-floral-corner.tl { top: -40px; left: -40px; }
+        .d-floral-corner.tr { top: -40px; right: -40px; transform: scaleX(-1); }
+        .d-floral-corner.bl { bottom: -40px; left: -40px; transform: scaleY(-1); }
+        .d-floral-corner.br { bottom: -40px; right: -40px; transform: scale(-1,-1); }
+
+        .d-wreath {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 1px solid rgba(110,125,87,0.6);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 80px 220px;
+            background: radial-gradient(circle, rgba(255,251,244,0.75) 62%, rgba(255,251,244,0.15));
         }
-
-        /* Botanical side sprays drawn inline as SVG */
-        .spray {
+        .d-wreath::before,
+        .d-wreath::after {
+            content: '';
             position: absolute;
-            bottom: 0;
-            width: 420px;
-            height: 900px;
-            pointer-events: none;
-            z-index: 1;
-            opacity: 0.92;
+            left: 50%;
+            width: 78px;
+            height: 52px;
+            background-image: url('https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-2-20240504082626-p3p_x.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translateX(-50%);
         }
-        .spray svg {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-        .spray.left { left: -30px; }
-        .spray.right { right: -30px; transform: scaleX(-1); }
-
-        /* Center content */
-        .card-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 18px;
+        .d-wreath::before { top: -26px; }
+        .d-wreath::after { bottom: -26px; transform: translateX(-50%) rotate(180deg); }
+        .d-wreath span {
+            font-family: 'Ephesis', cursive;
+            font-size: 2.8rem;
+            color: #6e7d57;
+            line-height: 1;
         }
 
-        .top-label {
+        .d-kicker {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            letter-spacing: 6px;
+            letter-spacing: 7px;
             text-transform: uppercase;
-            color: #1a1a1a;
+            font-size: 15px;
+            color: #6e7d57;
             font-weight: 600;
         }
 
-        .script-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 110px;
-            line-height: 1.05;
+        .d-names-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .d-name-top, .d-name-bot {
+            font-family: 'Ephesis', cursive;
+            font-size: 3.6rem;
+            line-height: 1;
             color: #1a1a1a;
             font-weight: 400;
         }
-        .script-title .line2 {
+        .d-monogram {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 10px 0;
+        }
+        .d-monogram span {
             display: block;
-            font-size: 90px;
-            margin-top: -10px;
+            width: 64px;
+            height: 1px;
+            background: #6e7d57;
         }
-
-        .names {
+        .d-monogram em {
             font-family: 'Ephesis', cursive;
-            font-size: 72px;
-            color: #1a1a1a;
-            margin-top: 10px;
-        }
-
-        .date-line {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 26px;
-            letter-spacing: 2px;
-            color: #1a1a1a;
-            font-weight: 600;
-            margin-top: 6px;
-        }
-        .date-line .dot {
-            display: inline-block;
-            margin: 0 14px;
+            font-style: normal;
+            font-size: 2.2rem;
             color: #6e7d57;
         }
 
-        .time {
+        .d-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            width: 90%;
+        }
+        .d-divider .d-div-leaf {
+            flex: 1;
+            height: 1px;
+            max-width: 120px;
+            background: linear-gradient(90deg, transparent, #6e7d57, transparent);
+            position: relative;
+        }
+        .d-divider .d-div-leaf.right { transform: scaleX(-1); }
+        .d-divider .d-div-text {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            color: #555;
-            letter-spacing: 1px;
-            margin-top: 4px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 13px;
+            color: #6e7d57;
+            white-space: nowrap;
         }
 
-        /* Bottom sage band */
-        .card-bottom {
-            position: relative;
-            height: 170px;
-            background: #d5dcc6;
+        .d-hero-date {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Cormorant Garamond', serif;
+            margin: 4px 0;
+        }
+        .d-date-cell {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
-            z-index: 2;
+            padding: 10px 14px;
+            min-width: 60px;
         }
-        .card-bottom .invite-text {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 30px;
-            letter-spacing: 5px;
+        .d-date-cell .lbl {
+            font-size: 12px;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            color: #999;
+        }
+        .d-date-cell .val {
+            font-size: 1.7rem;
+            font-weight: 700;
             color: #1a1a1a;
-            font-weight: 600;
+            line-height: 1.1;
         }
-        .card-bottom .reception {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 18px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #4a4a4a;
+        .d-date-cell.big .val { font-size: 2.8rem; color: #6e7d57; }
+        .d-date-sep {
+            width: 1px;
+            height: 44px;
+            background: rgba(110,125,87,0.4);
         }
 
-        /* Preview scaling for screen */
+        .d-hero-invite {
+            font-family: 'Ephesis', cursive;
+            font-size: 1.9rem;
+            color: #1f1f1f;
+            margin-top: 2px;
+        }
+        .d-hero-time {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+        }
+        .d-hero-reception {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #6e7d57;
+        }
+
+        .d-floral-bottom {
+            width: 150px;
+            height: 110px;
+            background-image: url('https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/thiet-ke-chua-co-ten-2-20240504082626-p3p_x.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(180deg);
+            margin-top: 4px;
+        }
+
         .preview-wrapper {
             transform-origin: center center;
             width: 1920px;
@@ -219,183 +325,50 @@ $time = '16 giờ 30 phút';
 <div class="stage" id="stage">
     <div class="preview-wrapper" id="previewWrapper">
         <div id="invitation-card">
-            <div class="card-top">
-                <span class="spray left">
-                    <svg viewBox="0 0 420 900" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="fernLight" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#c5d4ae"/>
-                                <stop offset="100%" stop-color="#9bb07a"/>
-                            </linearGradient>
-                            <linearGradient id="fernMid" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#a3b588"/>
-                                <stop offset="100%" stop-color="#7a8f5a"/>
-                            </linearGradient>
-                            <linearGradient id="fernDark" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#7a8f5a"/>
-                                <stop offset="100%" stop-color="#566b3f"/>
-                            </linearGradient>
-                        </defs>
+            <div class="hero-photo"></div>
+            <div class="hero-card">
+                <div class="hero-inner">
+                    <span class="d-corner tl"></span>
+                    <span class="d-corner tr"></span>
+                    <span class="d-corner bl"></span>
+                    <span class="d-corner br"></span>
 
-                        <!-- main curved stems -->
-                        <path d="M210 900 C195 780 160 650 110 500 C80 410 55 340 30 290" fill="none" stroke="#8c9e6d" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M250 900 C265 780 300 640 350 480 C375 400 400 340 415 290" fill="none" stroke="#8fa370" stroke-width="2.5" stroke-linecap="round"/>
-                        <path d="M160 900 C125 760 80 600 50 430 C35 350 22 290 8 240" fill="none" stroke="#a3b588" stroke-width="2" stroke-linecap="round"/>
+                    <span class="d-floral-corner tl"></span>
+                    <span class="d-floral-corner tr"></span>
+                    <span class="d-floral-corner bl"></span>
+                    <span class="d-floral-corner br"></span>
 
-                        <!-- dense fern leaflets along left stem -->
-                        <g opacity="0.92">
-                            <ellipse cx="55" cy="330" rx="52" ry="10" fill="url(#fernDark)" transform="rotate(-28 55 330)"/>
-                            <ellipse cx="72" cy="375" rx="58" ry="11" fill="url(#fernMid)" transform="rotate(-24 72 375)"/>
-                            <ellipse cx="88" cy="425" rx="64" ry="12" fill="url(#fernDark)" transform="rotate(-20 88 425)"/>
-                            <ellipse cx="105" cy="480" rx="68" ry="13" fill="url(#fernMid)" transform="rotate(-16 105 480)"/>
-                            <ellipse cx="122" cy="540" rx="72" ry="14" fill="url(#fernDark)" transform="rotate(-12 122 540)"/>
-                            <ellipse cx="140" cy="605" rx="74" ry="15" fill="url(#fernLight)" transform="rotate(-8 140 605)"/>
-                            <ellipse cx="160" cy="675" rx="76" ry="15" fill="url(#fernMid)" transform="rotate(-4 160 675)"/>
-                            <ellipse cx="182" cy="750" rx="74" ry="15" fill="url(#fernDark)" transform="rotate(0 182 750)"/>
-                            <ellipse cx="205" cy="830" rx="70" ry="14" fill="url(#fernMid)" transform="rotate(4 205 830)"/>
-                        </g>
+                    <div class="d-wreath"><span><?= htmlspecialchars($monogram) ?></span></div>
 
-                        <!-- dense fern leaflets along right stem -->
-                        <g opacity="0.92">
-                            <ellipse cx="335" cy="360" rx="56" ry="11" fill="url(#fernLight)" transform="rotate(22 335 360)"/>
-                            <ellipse cx="318" cy="415" rx="62" ry="12" fill="url(#fernMid)" transform="rotate(18 318 415)"/>
-                            <ellipse cx="300" cy="475" rx="66" ry="13" fill="url(#fernDark)" transform="rotate(14 300 475)"/>
-                            <ellipse cx="282" cy="540" rx="70" ry="14" fill="url(#fernLight)" transform="rotate(10 282 540)"/>
-                            <ellipse cx="265" cy="610" rx="72" ry="15" fill="url(#fernMid)" transform="rotate(6 265 610)"/>
-                            <ellipse cx="250" cy="685" rx="72" ry="15" fill="url(#fernDark)" transform="rotate(2 250 685)"/>
-                            <ellipse cx="238" cy="765" rx="70" ry="14" fill="url(#fernLight)" transform="rotate(-2 238 765)"/>
-                        </g>
-
-                        <!-- airy side sprigs -->
-                        <g fill="#9bb07a" opacity="0.8">
-                            <ellipse cx="28" cy="400" rx="42" ry="8" transform="rotate(-38 28 400)"/>
-                            <ellipse cx="38" cy="455" rx="46" ry="9" transform="rotate(-32 38 455)"/>
-                            <ellipse cx="50" cy="515" rx="48" ry="9" transform="rotate(-26 50 515)"/>
-                            <ellipse cx="370" cy="340" rx="46" ry="9" transform="rotate(38 370 340)"/>
-                            <ellipse cx="385" cy="400" rx="50" ry="10" transform="rotate(32 385 400)"/>
-                            <ellipse cx="395" cy="465" rx="50" ry="10" transform="rotate(26 395 465)"/>
-                        </g>
-
-                        <!-- baby's breath white dots -->
-                        <g fill="#fff" opacity="0.95">
-                            <circle cx="88" cy="425" r="4"/>
-                            <circle cx="105" cy="480" r="5"/>
-                            <circle cx="122" cy="540" r="4"/>
-                            <circle cx="160" cy="675" r="5"/>
-                            <circle cx="205" cy="830" r="4"/>
-                            <circle cx="300" cy="475" r="4"/>
-                            <circle cx="265" cy="610" r="5"/>
-                            <circle cx="238" cy="765" r="4"/>
-                            <circle cx="38" cy="455" r="3"/>
-                            <circle cx="385" cy="400" r="3"/>
-                        </g>
-
-                        <!-- tiny cream buds -->
-                        <g fill="#f3deb7" opacity="0.95">
-                            <circle cx="72" cy="375" r="4"/>
-                            <circle cx="140" cy="605" r="5"/>
-                            <circle cx="182" cy="750" r="4"/>
-                            <circle cx="335" cy="360" r="4"/>
-                            <circle cx="282" cy="540" r="5"/>
-                            <circle cx="250" cy="685" r="4"/>
-                        </g>
-                    </svg>
-                </span>
-                <span class="spray right">
-                    <svg viewBox="0 0 420 900" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="fernLightR" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#c5d4ae"/>
-                                <stop offset="100%" stop-color="#9bb07a"/>
-                            </linearGradient>
-                            <linearGradient id="fernMidR" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#a3b588"/>
-                                <stop offset="100%" stop-color="#7a8f5a"/>
-                            </linearGradient>
-                            <linearGradient id="fernDarkR" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#7a8f5a"/>
-                                <stop offset="100%" stop-color="#566b3f"/>
-                            </linearGradient>
-                        </defs>
-                        <path d="M210 900 C195 780 160 650 110 500 C80 410 55 340 30 290" fill="none" stroke="#8c9e6d" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M250 900 C265 780 300 640 350 480 C375 400 400 340 415 290" fill="none" stroke="#8fa370" stroke-width="2.5" stroke-linecap="round"/>
-                        <path d="M160 900 C125 760 80 600 50 430 C35 350 22 290 8 240" fill="none" stroke="#a3b588" stroke-width="2" stroke-linecap="round"/>
-                        <g opacity="0.92">
-                            <ellipse cx="55" cy="330" rx="52" ry="10" fill="url(#fernDarkR)" transform="rotate(-28 55 330)"/>
-                            <ellipse cx="72" cy="375" rx="58" ry="11" fill="url(#fernMidR)" transform="rotate(-24 72 375)"/>
-                            <ellipse cx="88" cy="425" rx="64" ry="12" fill="url(#fernDarkR)" transform="rotate(-20 88 425)"/>
-                            <ellipse cx="105" cy="480" rx="68" ry="13" fill="url(#fernMidR)" transform="rotate(-16 105 480)"/>
-                            <ellipse cx="122" cy="540" rx="72" ry="14" fill="url(#fernDarkR)" transform="rotate(-12 122 540)"/>
-                            <ellipse cx="140" cy="605" rx="74" ry="15" fill="url(#fernLightR)" transform="rotate(-8 140 605)"/>
-                            <ellipse cx="160" cy="675" rx="76" ry="15" fill="url(#fernMidR)" transform="rotate(-4 160 675)"/>
-                            <ellipse cx="182" cy="750" rx="74" ry="15" fill="url(#fernDarkR)" transform="rotate(0 182 750)"/>
-                            <ellipse cx="205" cy="830" rx="70" ry="14" fill="url(#fernMidR)" transform="rotate(4 205 830)"/>
-                        </g>
-                        <g opacity="0.92">
-                            <ellipse cx="335" cy="360" rx="56" ry="11" fill="url(#fernLightR)" transform="rotate(22 335 360)"/>
-                            <ellipse cx="318" cy="415" rx="62" ry="12" fill="url(#fernMidR)" transform="rotate(18 318 415)"/>
-                            <ellipse cx="300" cy="475" rx="66" ry="13" fill="url(#fernDarkR)" transform="rotate(14 300 475)"/>
-                            <ellipse cx="282" cy="540" rx="70" ry="14" fill="url(#fernLightR)" transform="rotate(10 282 540)"/>
-                            <ellipse cx="265" cy="610" rx="72" ry="15" fill="url(#fernMidR)" transform="rotate(6 265 610)"/>
-                            <ellipse cx="250" cy="685" rx="72" ry="15" fill="url(#fernDarkR)" transform="rotate(2 250 685)"/>
-                            <ellipse cx="238" cy="765" rx="70" ry="14" fill="url(#fernLightR)" transform="rotate(-2 238 765)"/>
-                        </g>
-                        <g fill="#9bb07a" opacity="0.8">
-                            <ellipse cx="28" cy="400" rx="42" ry="8" transform="rotate(-38 28 400)"/>
-                            <ellipse cx="38" cy="455" rx="46" ry="9" transform="rotate(-32 38 455)"/>
-                            <ellipse cx="50" cy="515" rx="48" ry="9" transform="rotate(-26 50 515)"/>
-                            <ellipse cx="370" cy="340" rx="46" ry="9" transform="rotate(38 370 340)"/>
-                            <ellipse cx="385" cy="400" rx="50" ry="10" transform="rotate(32 385 400)"/>
-                            <ellipse cx="395" cy="465" rx="50" ry="10" transform="rotate(26 395 465)"/>
-                        </g>
-                        <g fill="#fff" opacity="0.95">
-                            <circle cx="88" cy="425" r="4"/>
-                            <circle cx="105" cy="480" r="5"/>
-                            <circle cx="122" cy="540" r="4"/>
-                            <circle cx="160" cy="675" r="5"/>
-                            <circle cx="205" cy="830" r="4"/>
-                            <circle cx="300" cy="475" r="4"/>
-                            <circle cx="265" cy="610" r="5"/>
-                            <circle cx="238" cy="765" r="4"/>
-                            <circle cx="38" cy="455" r="3"/>
-                            <circle cx="385" cy="400" r="3"/>
-                        </g>
-                        <g fill="#f3deb7" opacity="0.95">
-                            <circle cx="72" cy="375" r="4"/>
-                            <circle cx="140" cy="605" r="5"/>
-                            <circle cx="182" cy="750" r="4"/>
-                            <circle cx="335" cy="360" r="4"/>
-                            <circle cx="282" cy="540" r="5"/>
-                            <circle cx="250" cy="685" r="4"/>
-                        </g>
-                    </svg>
-                </span>
-
-                <div class="card-content">
-                    <p class="top-label">THIỆP MỜI</p>
-                    <div class="script-title">
-                        Wedding
-                        <span class="line2">Invitation</span>
+                    <p class="d-kicker">— Wedding Invitation —</p>
+                    <div class="d-names-block">
+                        <h2 class="d-name-top"><?= htmlspecialchars($groomName) ?></h2>
+                        <div class="d-monogram"><span></span><em>&amp;</em><span></span></div>
+                        <h2 class="d-name-bot"><?= htmlspecialchars($brideName) ?></h2>
                     </div>
 
-                    <p class="names"><?= htmlspecialchars($groomName) ?> &amp; <?= htmlspecialchars($brideName) ?></p>
+                    <div class="d-divider">
+                        <span class="d-div-leaf left"></span>
+                        <span class="d-div-text">Save the Date</span>
+                        <span class="d-div-leaf right"></span>
+                    </div>
 
-                    <p class="date-line">
-                        <?= htmlspecialchars($weekday) ?>
-                        <span class="dot">•</span>
-                        Ngày <?= htmlspecialchars($day) ?>
-                        <span class="dot">•</span>
-                        Tháng <?= htmlspecialchars($month) ?>
-                        <span class="dot">•</span>
-                        <?= htmlspecialchars($year) ?>
-                    </p>
-                    <p class="time"><?= htmlspecialchars($time) ?> — Reception to Follow</p>
+                    <div class="d-hero-date">
+                        <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val">6</span></div>
+                        <div class="d-date-sep"></div>
+                        <div class="d-date-cell big"><span class="lbl">Ngày</span><span class="val">3</span></div>
+                        <div class="d-date-sep"></div>
+                        <div class="d-date-cell"><span class="lbl">Tháng</span><span class="val">07</span></div>
+                        <div class="d-date-sep"></div>
+                        <div class="d-date-cell"><span class="lbl">Năm</span><span class="val">2026</span></div>
+                    </div>
+
+                    <p class="d-hero-invite">Trân trọng kính mời</p>
+                    <p class="d-hero-time"><?= htmlspecialchars($time) ?></p>
+                    <p class="d-hero-reception">Reception to Follow</p>
+
+                    <div class="d-floral-bottom"></div>
                 </div>
-            </div>
-
-            <div class="card-bottom">
-                <p class="invite-text">TRÂN TRỌNG KÍNH MỜI</p>
-                <p class="reception">Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng mình</p>
             </div>
         </div>
     </div>
@@ -410,9 +383,7 @@ $time = '16 giờ 30 phút';
         const stage = document.getElementById('stage');
         const maxWidth = stage.clientWidth - 40;
         const maxHeight = stage.clientHeight - 40;
-        const cardWidth = 1920;
-        const cardHeight = 1080;
-        const scale = Math.min(maxWidth / cardWidth, maxHeight / cardHeight, 1);
+        const scale = Math.min(maxWidth / 1920, maxHeight / 1080, 1);
         previewWrapper.style.transform = 'scale(' + scale + ')';
     }
     fitPreview();
@@ -423,7 +394,6 @@ $time = '16 giờ 30 phút';
         const originalText = btn.textContent;
         btn.textContent = 'Đang tạo ảnh...';
 
-        // Clone and render at native size for sharp export
         const clone = card.cloneNode(true);
         clone.style.position = 'fixed';
         clone.style.top = '0';
@@ -435,10 +405,10 @@ $time = '16 giờ 30 phút';
         document.body.appendChild(clone);
 
         html2canvas(clone, {
-            scale: 1, // native 1920x1080 Full HD
+            scale: 1,
             useCORS: true,
             allowTaint: true,
-            backgroundColor: '#ffffff',
+            backgroundColor: '#faf6ee',
             logging: false,
             width: 1920,
             height: 1080,
