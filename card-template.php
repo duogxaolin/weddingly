@@ -52,9 +52,9 @@ $dateDisplay = $multiDate
         }
         .btn {
             padding: 10px 22px;
-            border: 1px solid #6e7d57;
+            border: 1px solid #9aa47e;
             border-radius: 24px;
-            background: #6e7d57;
+            background: #9aa47e;
             color: #fff;
             font-family: 'Cormorant Garamond', serif;
             font-size: 15px;
@@ -62,12 +62,12 @@ $dateDisplay = $multiDate
             cursor: pointer;
             transition: all .2s;
         }
-        .btn:hover { background: #1a1a1a; border-color: #1a1a1a; }
+        .btn:hover { background: #2c2c2c; border-color: #2c2c2c; }
         .btn-outline {
             background: transparent;
-            color: #6e7d57;
+            color: #9aa47e;
         }
-        .btn-outline:hover { background: #6e7d57; color: #fff; }
+        .btn-outline:hover { background: #9aa47e; color: #fff; }
 
         .stage {
             display: flex;
@@ -82,9 +82,7 @@ $dateDisplay = $multiDate
             position: relative;
             width: 720px;
             height: 1280px;
-            background-image: url('https://w.ladicdn.com/s750x900/6322a62f2dad980013bb5005/gray-green-floral-simple-illustration-wedding-invitation-20240504032041-nzlyi.png');
-            background-size: cover;
-            background-position: center;
+            background: #f8f7f3;
             overflow: hidden;
             box-shadow: 0 30px 80px -30px rgba(0,0,0,0.35);
             display: flex;
@@ -96,11 +94,11 @@ $dateDisplay = $multiDate
         .hero-inner {
             position: relative;
             z-index: 2;
-            border: 1px solid rgba(110,125,87,0.55);
-            outline: 1px solid rgba(110,125,87,0.25);
+            border: 1px solid rgba(154, 164, 126, 0.55);
+            outline: 1px solid rgba(154, 164, 126, 0.25);
             outline-offset: 6px;
             padding: 40px 22px 30px;
-            background: rgba(255, 251, 244, 0.82);
+            background: rgba(255, 255, 252, 0.82);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -142,38 +140,25 @@ $dateDisplay = $multiDate
             position: absolute;
             width: 28px;
             height: 28px;
-            border: 2px solid #6e7d57;
+            border: 2px solid #9aa47e;
         }
         .d-corner.tl { top: -2px; left: -2px; border-right: none; border-bottom: none; }
         .d-corner.tr { top: -2px; right: -2px; border-left: none; border-bottom: none; }
         .d-corner.bl { bottom: -2px; left: -2px; border-right: none; border-top: none; }
         .d-corner.br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
 
-        .d-floral-corner {
-            position: absolute;
-            width: 115px;
-            height: 115px;
-            background-image: url('https://w.ladicdn.com/s500x500/6322a62f2dad980013bb5005/3-20240504043622-9louq.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            pointer-events: none;
-        }
-        .d-floral-corner.tl { top: -45px; left: -45px; }
-        .d-floral-corner.tr { top: -45px; right: -45px; transform: scaleX(-1); }
-        .d-floral-corner.bl { bottom: -45px; left: -45px; transform: scaleY(-1); }
-        .d-floral-corner.br { bottom: -45px; right: -45px; transform: scale(-1,-1); }
+        .d-floral-corner { display: none; }
 
         .d-wreath {
             position: relative;
             width: 170px;
             height: 170px;
             border-radius: 50%;
-            border: 1px solid rgba(110,125,87,0.6);
+            border: 1px solid rgba(154, 164, 126, 0.6);
             display: flex;
             align-items: center;
             justify-content: center;
-            background: radial-gradient(circle, rgba(255,251,244,0.75) 62%, rgba(255,251,244,0.15));
+            background: radial-gradient(circle, rgba(255,255,252,0.9) 62%, rgba(248,247,243,0.15));
             flex-shrink: 0;
         }
         .d-wreath::before,
@@ -194,7 +179,7 @@ $dateDisplay = $multiDate
         .d-wreath span {
             font-family: 'Ephesis', cursive;
             font-size: 4rem;
-            color: #6e7d57;
+            color: #9aa47e;
             line-height: 1;
         }
 
@@ -203,7 +188,7 @@ $dateDisplay = $multiDate
             letter-spacing: 7px;
             text-transform: uppercase;
             font-size: 17px;
-            color: #6e7d57;
+            color: #9aa47e;
             font-weight: 600;
             flex-shrink: 0;
         }
@@ -220,7 +205,7 @@ $dateDisplay = $multiDate
             font-family: 'Ephesis', cursive;
             font-size: 5rem;
             line-height: 1;
-            color: #1a1a1a;
+            color: #2c2c2c;
             font-weight: 400;
         }
         .d-name-top { text-align: left; }
@@ -236,13 +221,13 @@ $dateDisplay = $multiDate
             display: block;
             width: 80px;
             height: 1px;
-            background: #6e7d57;
+            background: #9aa47e;
         }
         .d-monogram em {
             font-family: 'Ephesis', cursive;
             font-style: normal;
             font-size: 2.8rem;
-            color: #6e7d57;
+            color: #9aa47e;
         }
 
         .d-divider {
@@ -258,7 +243,7 @@ $dateDisplay = $multiDate
             flex: 1;
             height: 1px;
             max-width: 130px;
-            background: linear-gradient(90deg, transparent, #6e7d57, transparent);
+            background: linear-gradient(90deg, transparent, #9aa47e, transparent);
         }
         .d-divider .d-div-leaf.right { transform: scaleX(-1); }
         .d-divider .d-div-text {
@@ -266,7 +251,7 @@ $dateDisplay = $multiDate
             letter-spacing: 4px;
             text-transform: uppercase;
             font-size: 12px;
-            color: #6e7d57;
+            color: #9aa47e;
             white-space: nowrap;
         }
 
@@ -289,25 +274,25 @@ $dateDisplay = $multiDate
             font-size: 13px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #999;
+            color: #a8a8a0;
         }
         .d-date-cell .val {
             font-size: 2.1rem;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #2c2c2c;
             line-height: 1.1;
         }
-        .d-date-cell.big .val { font-size: 3.6rem; color: #6e7d57; }
+        .d-date-cell.big .val { font-size: 3.6rem; color: #9aa47e; }
         .d-date-sep {
             width: 1px;
             height: 58px;
-            background: rgba(110,125,87,0.4);
+            background: rgba(154, 164, 126, 0.4);
         }
 
         .d-date-full {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.7rem;
-            color: #1a1a1a;
+            color: #2c2c2c;
             font-weight: 600;
             letter-spacing: 1px;
             margin: 8px 0;
@@ -318,14 +303,14 @@ $dateDisplay = $multiDate
         .d-hero-invite {
             font-family: 'Ephesis', cursive;
             font-size: 2.4rem;
-            color: #1f1f1f;
+            color: #2c2c2c;
             margin-top: 4px;
         }
         .d-hero-time {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.7rem;
             font-weight: 600;
-            color: #1a1a1a;
+            color: #2c2c2c;
             letter-spacing: 1px;
         }
         .d-hero-reception {
@@ -333,7 +318,7 @@ $dateDisplay = $multiDate
             letter-spacing: 4px;
             text-transform: uppercase;
             font-size: 13px;
-            color: #6e7d57;
+            color: #9aa47e;
         }
 
         .d-venue {
@@ -349,14 +334,14 @@ $dateDisplay = $multiDate
             font-size: 1.15rem;
             font-weight: 700;
             letter-spacing: 1px;
-            color: #1a1a1a;
+            color: #2c2c2c;
             line-height: 1.4;
         }
         .d-venue-address {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
-            color: #6e7d57;
+            color: #9aa47e;
             line-height: 1.4;
         }
 
@@ -486,7 +471,7 @@ $dateDisplay = $multiDate
             scale: 2,
             useCORS: true,
             allowTaint: true,
-            backgroundColor: '#faf6ee',
+            backgroundColor: '#f8f7f3',
             logging: false,
             width: 720,
             height: 1280,
