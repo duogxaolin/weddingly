@@ -82,7 +82,7 @@ $dateDisplay = $multiDate
             position: relative;
             width: 720px;
             height: 1280px;
-            background: linear-gradient(160deg, #7d8564 0%, #6e7655 100%);
+            background: linear-gradient(160deg, #8a9370 0%, #7b8360 100%);
             overflow: hidden;
             box-shadow: 0 30px 80px -30px rgba(0,0,0,0.35);
             display: flex;
@@ -109,6 +109,36 @@ $dateDisplay = $multiDate
             height: 100%;
             max-width: 660px;
         }
+
+        .hero-inner::before,
+        .hero-inner::after {
+            content: '';
+            position: absolute;
+            width: 190px;
+            height: 190px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23f8f7f3' stroke-width='1.6' opacity='0.95'%3E%3Cpath d='M8 82 Q30 28 82 8'/%3E%3Cpath d='M18 98 Q48 42 98 18'/%3E%3Cpath d='M32 108 Q58 54 108 32'/%3E%3C/g%3E%3Cg fill='%23f8f7f3' opacity='0.95'%3E%3Cellipse cx='76' cy='34' rx='18' ry='10' transform='rotate(-45 76 34)'/%3E%3Cellipse cx='76' cy='34' rx='18' ry='10' transform='rotate(0 76 34)'/%3E%3Cellipse cx='76' cy='34' rx='18' ry='10' transform='rotate(45 76 34)'/%3E%3Cellipse cx='76' cy='34' rx='18' ry='10' transform='rotate(90 76 34)'/%3E%3Ccircle cx='76' cy='34' r='5' fill='%239aa47e'/%3E%3C/g%3E%3Cg fill='%23f8f7f3' opacity='0.8'%3E%3Cellipse cx='44' cy='70' rx='12' ry='8' transform='rotate(-30 44 70)'/%3E%3Cellipse cx='44' cy='70' rx='12' ry='8' transform='rotate(30 44 70)'/%3E%3Cellipse cx='44' cy='70' rx='12' ry='8' transform='rotate(90 44 70)'/%3E%3Ccircle cx='44' cy='70' r='3.5' fill='%239aa47e'/%3E%3C/g%3E%3Cg fill='%23f8f7f3' opacity='0.65'%3E%3Cellipse cx='96' cy='76' rx='10' ry='7' transform='rotate(-20 96 76)'/%3E%3Cellipse cx='96' cy='76' rx='10' ry='7' transform='rotate(40 96 76)'/%3E%3Cellipse cx='96' cy='76' rx='10' ry='7' transform='rotate(100 96 76)'/%3E%3Ccircle cx='96' cy='76' r='3' fill='%239aa47e'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            pointer-events: none;
+            z-index: 4;
+        }
+        .hero-inner::before { top: -34px; left: -34px; }
+        .hero-inner::after  { bottom: -34px; right: -34px; transform: rotate(180deg); }
+
+        .hero-inner .d-corner-extra {
+            position: absolute;
+            width: 190px;
+            height: 190px;
+            pointer-events: none;
+            z-index: 4;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23f8f7f3' stroke-width='1.6' opacity='0.95'%3E%3Cpath d='M8 82 Q30 28 82 8'/%3E%3Cpath d='M18 98 Q48 42 98 18'/%3E%3Cpath d='M32 108 Q58 54 108 32'/%3E%3C/g%3E%3Cg fill='%23f8f7f3' opacity='0.95'%3E%3Cellipse cx='76' cy='34' rx='18' ry='10' transform='rotate(-45 76 34)'/%3E%3Cellipse cx='76' cy='34' rx='18' ry='10' transform='rotate(0 76 34)'/%3E%3Cellipse cx='76' cy='34' rx='18' ry='10' transform='rotate(45 76 34)'/%3E%3Cellipse cx='76' cy='34' rx='18' ry='10' transform='rotate(90 76 34)'/%3E%3Ccircle cx='76' cy='34' r='5' fill='%239aa47e'/%3E%3C/g%3E%3Cg fill='%23f8f7f3' opacity='0.8'%3E%3Cellipse cx='44' cy='70' rx='12' ry='8' transform='rotate(-30 44 70)'/%3E%3Cellipse cx='44' cy='70' rx='12' ry='8' transform='rotate(30 44 70)'/%3E%3Cellipse cx='44' cy='70' rx='12' ry='8' transform='rotate(90 44 70)'/%3E%3Ccircle cx='44' cy='70' r='3.5' fill='%239aa47e'/%3E%3C/g%3E%3Cg fill='%23f8f7f3' opacity='0.65'%3E%3Cellipse cx='96' cy='76' rx='10' ry='7' transform='rotate(-20 96 76)'/%3E%3Cellipse cx='96' cy='76' rx='10' ry='7' transform='rotate(40 96 76)'/%3E%3Cellipse cx='96' cy='76' rx='10' ry='7' transform='rotate(100 96 76)'/%3E%3Ccircle cx='96' cy='76' r='3' fill='%239aa47e'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .hero-inner .d-corner-extra.tr { top: -34px; right: -34px; transform: scaleX(-1); }
+        .hero-inner .d-corner-extra.bl { bottom: -34px; left: -34px; transform: scaleY(-1); }
 
         .hero-top, .hero-middle, .hero-bottom {
             display: flex;
@@ -149,6 +179,24 @@ $dateDisplay = $multiDate
         .d-corner.br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
 
         .d-floral-corner { display: none; }
+
+        .d-flower-deco {
+            position: absolute;
+            z-index: 3;
+            pointer-events: none;
+            width: 150px;
+            height: 150px;
+            opacity: 0.65;
+        }
+        .d-flower-deco svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .d-flower-deco.tl { top: 14px; left: 14px; }
+        .d-flower-deco.tr { top: 14px; right: 14px; transform: scaleX(-1); }
+        .d-flower-deco.bl { bottom: 14px; left: 14px; transform: scaleY(-1); }
+        .d-flower-deco.br { bottom: 14px; right: 14px; transform: scale(-1, -1); }
 
         .d-wreath {
             position: relative;
@@ -386,6 +434,9 @@ $dateDisplay = $multiDate
                 <span class="d-corner bl"></span>
                 <span class="d-corner br"></span>
 
+                <span class="d-corner-extra tr"></span>
+                <span class="d-corner-extra bl"></span>
+
                 <span class="d-floral-corner tl"></span>
                 <span class="d-floral-corner tr"></span>
                 <span class="d-floral-corner bl"></span>
@@ -472,7 +523,7 @@ $dateDisplay = $multiDate
             scale: 2,
             useCORS: true,
             allowTaint: true,
-            backgroundColor: '#7d8564',
+            backgroundColor: '#8a9370',
             logging: false,
             width: 720,
             height: 1280,
