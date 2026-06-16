@@ -24,6 +24,7 @@ if (!isset($multiDate)) $multiDate = false;
 if (!isset($slug)) $slug = 'thiep-cuoi-ngoc-tan-thu-trang';
 if (!isset($titleLabel)) $titleLabel = '— Wedding Invitation —';
 if (!isset($timeLabel)) $timeLabel = 'Giờ';
+if (!isset($venueTitle)) $venueTitle = 'TIỆC ĐƯỢC TỔ CHỨC TẠI TƯ GIA NHÀ TRAI';
 
 $dateDisplay = $multiDate
     ? "Ngày {$day} & " . ((int)$day + 1) . " tháng {$month} năm {$year}"
@@ -346,7 +347,9 @@ $dateDisplay = $multiDate
             color: #2c2c2c;
             line-height: 1.1;
         }
-        .d-date-cell.big .val { font-size: 3.6rem; color: #9aa47e; }
+                .d-date-cell.big .val { font-size: 3.6rem; color: #9aa47e; }
+        .d-date-cell.weekday { justify-content: center; }
+        .d-date-cell.weekday .val { font-size: 1.7rem; font-weight: 600; color: #2c2c2c; letter-spacing: 0.5px; }
         .d-date-sep {
             width: 1px;
             height: 58px;
@@ -494,7 +497,7 @@ $dateDisplay = $multiDate
                     <?php if ($multiDate): ?>
                         <div class="d-multi-date">
                             <div class="d-hero-date">
-                                <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val"><?= htmlspecialchars($weekdayText) ?></span></div>
+                                <div class="d-date-cell weekday"><span class="val"><?= htmlspecialchars($weekdayText) ?></span></div>
                                 <div class="d-date-sep"></div>
                                 <div class="d-date-cell big"><span class="lbl">Ngày</span><span class="val"><?= htmlspecialchars($day) ?></span></div>
                                 <div class="d-date-sep"></div>
@@ -504,7 +507,7 @@ $dateDisplay = $multiDate
                             </div>
                             <span class="d-multi-date-sep">và</span>
                             <div class="d-hero-date">
-                                <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val"><?= htmlspecialchars($weekdayText2) ?></span></div>
+                                <div class="d-date-cell weekday"><span class="val"><?= htmlspecialchars($weekdayText2) ?></span></div>
                                 <div class="d-date-sep"></div>
                                 <div class="d-date-cell big"><span class="lbl">Ngày</span><span class="val"><?= htmlspecialchars($day2) ?></span></div>
                                 <div class="d-date-sep"></div>
@@ -515,7 +518,7 @@ $dateDisplay = $multiDate
                         </div>
                     <?php else: ?>
                         <div class="d-hero-date">
-                            <div class="d-date-cell"><span class="lbl">Thứ</span><span class="val"><?= htmlspecialchars($weekdayText) ?></span></div>
+                            <div class="d-date-cell weekday"><span class="val"><?= htmlspecialchars($weekdayText) ?></span></div>
                             <div class="d-date-sep"></div>
                             <div class="d-date-cell big"><span class="lbl">Ngày</span><span class="val"><?= htmlspecialchars($day) ?></span></div>
                             <div class="d-date-sep"></div>
@@ -530,7 +533,7 @@ $dateDisplay = $multiDate
                     <p class="d-hero-invite">Trân trọng kính mời</p>
                     <p class="d-hero-time"><?= htmlspecialchars($time) ?></p>
                     <div class="d-venue">
-                        <p class="d-venue-title">TIỆC ĐƯỢC TỔ CHỨC TẠI TƯ GIA NHÀ TRAI</p>
+                        <p class="d-venue-title"><?= htmlspecialchars($venueTitle) ?></p>
                         <p class="d-venue-address">Xã Xuân Giang, Ninh Bình</p>
                     </div>
                     <p class="d-hero-reception">Reception to Follow</p>
